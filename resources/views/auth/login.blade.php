@@ -1,48 +1,62 @@
 <x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
 
-        <x-validation-errors class="mb-4" />
-
-        @if (session('status'))
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ session('status') }}
-            </div>
-        @endif
-
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
-
-            <div>
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
-            </div>
-
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-checkbox id="remember_me" name="remember" />
-                    <span class="ml-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
-
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
+        <!-- Start:: header [[ Find at scss/framework/header.scss ]] -->
+        <header id="main_header">
+            <div class="container">
+                <nav class="navbar navbar-expand-lg">
+                    <a href="index.html" class="brand external">
+                        <img src="{{ asset('images/logos/logo.svg') }}" alt="Listen app">
                     </a>
-                @endif
-
-                <x-button class="ml-4">
-                    {{ __('Log in') }}
-                </x-button>
+                    <div class="d-flex align-items-center navbar-ex">
+                        <a class="text-white btn btn-gradient-info external"  href="{{ route('register') }}">Regístrate</a>
+                        <a class="btn btn-dark external ms-3" href="{{route('login')}}">Iniciar
+                            Sesión</a>
+    
+                        <button class="navbar-toggler ms-3 ms-sm-4" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <i class="ri-menu-3-fill"></i>
+                        </button>
+                    </div>
+                </nav>
             </div>
-        </form>
-    </x-authentication-card>
+        </header>
+        <!-- End:: header -->
+        <!-- Start:: wrapper [[ Find at scss/framework/wrapper.scss ]] -->
+        <div id="wrapper">
+            <!-- Inicio:: autenticación [[ Encontrar en scss/framework/auth.scss ]] -->
+            <div class="py-5 auth">
+                <div class="container">
+                    <div class="row">
+                        <div class="mx-auto col-xl-5 col-lg-7 col-md-9 col-sm-11">
+                            <div class="card">
+                                <div class="card-body p-sm-5">
+                                    <h4>Iniciar sesión en <span class="text-primary">SoundStream</span></h4>
+                                    <p class="fs-6">¡Bienvenido de nuevo! Inicia sesión con tus datos que ingresaste durante el registro</p>
+                                    <form action="#" class="mt-5">
+                                        <div class="mb-3">
+                                            <label for="username" class="form-label fw-medium">Correo</label>
+                                            <input type="text" id="username" class="form-control">
+                                        </div>
+                                        <div class="mb-2">
+                                            <label for="password" class="form-label fw-medium">Contraseña</label>
+                                            <input type="password" id="password" class="form-control">
+                                        </div>
+                                        <div class="mb-4 text-end">
+                                            <a href="#" class="link-primary fw-medium">¿Olvidaste tu contraseña?</a>
+                                        </div>
+                                        <div class="mb-5">
+                                            <input type="submit" class="btn btn-primary w-100" value="Iniciar Sesión">
+                                        </div>
+                                        <p>¿Todavía no estás registrado? <br><a href="register.html" class="fw-medium external">Registrarse</a></p>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin:: autenticación -->
+        </div>
+        <!-- End:: wrapper -->
 </x-guest-layout>

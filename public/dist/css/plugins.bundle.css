@@ -73,6 +73,16 @@
   }
 }
 
+.btn-gradient-info {
+  background-image: linear-gradient(to right, #6c63ff, #a96cff);
+  color: #fff;
+  transition: color 0.3s ease-in-out;
+}
+
+.btn-gradient-info:hover {
+  color: #f8f9fa;
+}
+
 body {
   margin: 0;
   font-family: var(--bs-body-font-family);

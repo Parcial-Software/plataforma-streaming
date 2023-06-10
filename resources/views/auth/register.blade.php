@@ -1,60 +1,73 @@
 <x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
+    
+    <!-- Start:: header [[ Find at scss/framework/header.scss ]] -->
+    <header id="main_header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <a href="index.html" class="brand external">
+                    <img src="{{ asset('images/logos/logo.svg') }}" alt="Listen app">
+                </a>
+                <div class="d-flex align-items-center navbar-ex">
+                    <a class="text-white btn btn-gradient-info external" href="{{ route('register') }}">Regístrate</a>
+                    <a class="btn btn-dark external ms-3" href="{{ route('login') }}">Iniciar
+                        Sesión</a>
 
-        <x-validation-errors class="mb-4" />
+                    <button class="navbar-toggler ms-3 ms-sm-4" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="ri-menu-3-fill"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
-
-            <div>
-                <x-label for="name" value="{{ __('Name') }}" />
-                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus autocomplete="name" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
-            </div>
-
-            <div class="mt-4">
-                <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />
-                <x-input id="password_confirmation" class="block mt-1 w-full" type="password" name="password_confirmation" required autocomplete="new-password" />
-            </div>
-
-            @if (Laravel\Jetstream\Jetstream::hasTermsAndPrivacyPolicyFeature())
-                <div class="mt-4">
-                    <x-label for="terms">
-                        <div class="flex items-center">
-                            <x-checkbox name="terms" id="terms" required />
-
-                            <div class="ml-2">
-                                {!! __('I agree to the :terms_of_service and :privacy_policy', [
-                                        'terms_of_service' => '<a target="_blank" href="'.route('terms.show').'" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">'.__('Terms of Service').'</a>',
-                                        'privacy_policy' => '<a target="_blank" href="'.route('policy.show').'" class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">'.__('Privacy Policy').'</a>',
-                                ]) !!}
+    <!-- Start:: wrapper [[ Find at scss/framework/wrapper.scss ]] -->
+    <div id="wrapper">
+        <!-- Inicio:: autenticación [[ Encontrar en scss/framework/auth.scss ]] -->
+        <div class="py-5 auth">
+            <div class="container">
+                <div class="row">
+                    <div class="mx-auto col-xl-5 col-lg-7 col-md-9 col-sm-11">
+                        <div class="card">
+                            <div class="card-body p-sm-5">
+                                <h4>Regístrate en <span class="text-primary">SoundStream</span></h4>
+                                <p class="fs-6">Es hora de unirte a SoundStream y disfrutar de una experiencia musical
+                                    increíble.</p>
+                                <form action="#" class="mt-5">
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label fw-medium">Correo electrónico</label>
+                                        <input type="text" id="email" class="form-control">
+                                    </div>
+                                    <div class="mb-2">
+                                        <label for="password" class="form-label fw-medium">Contraseña</label>
+                                        <input type="password" id="password" class="form-control">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="c_password" class="form-label fw-medium">Confirmar
+                                            Contraseña</label>
+                                        <input type="password" id="c_password" class="form-control">
+                                    </div>
+                                    <div class="mb-4">
+                                        <div class="mb-0 form-check">
+                                            <input class="form-check-input" type="checkbox" id="agree">
+                                            <label class="form-check-label" for="agree">Acepto <a
+                                                    href="#">Términos y Condiciones</a></label>
+                                        </div>
+                                    </div>
+                                    <div class="mb-5">
+                                        <input type="submit" class="btn btn-primary w-100" value="Iniciar Sesión">
+                                    </div>
+                                    <p>¿Ya tienes una cuenta? <br><a href="login.html"
+                                            class="fw-medium external">Iniciar Sesión</a></p>
+                                </form>
                             </div>
                         </div>
-                    </x-label>
+                    </div>
                 </div>
-            @endif
-
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
-                    {{ __('Register') }}
-                </x-button>
             </div>
-        </form>
-    </x-authentication-card>
+        </div>
+        <!-- Fin:: autenticación -->
+    </div>
+    <!-- End:: wrapper -->
 </x-guest-layout>
