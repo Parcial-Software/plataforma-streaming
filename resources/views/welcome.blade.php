@@ -12,9 +12,7 @@
                     <a class="btn btn-dark external ms-3" href="{{ route('login') }}">Iniciar
                         Sesión</a>
 
-                    <button class="navbar-toggler ms-3 ms-sm-4" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler ms-3 ms-sm-4" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <i class="ri-menu-3-fill"></i>
                     </button>
                 </div>
@@ -47,25 +45,20 @@
             <!-- Start:: main hero [[ Find at scss/framework/hero.scss ]] -->
             <div id="carouselExampleCaptions" class="mx-auto carousel slide main-hero" data-bs-ride="carousel">
                 <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <div class="mx-auto main-hero" style="background-image: url(images/background/portada.jpg);">
                             <div class="container">
                                 <div class="col-xl-6 col-lg-8 col-md-9 fs-5">
-                                    <h1 class="mb-3 main-hero__title">Música para llenar tu <span
-                                            class="text-primary">corazón.</span></h1>
+                                    <h1 class="mb-3 main-hero__title">Música para llenar tu <span class="text-primary">corazón.</span></h1>
                                     <div class="me-sm-5">
                                         <p>Explora playlists y álbumes inspirados en los artistas y géneros que más te
                                             apasionan.</p>
-                                        <a class="btn btn-light btn-lg btn-default external"
-                                            href="register.html">Pruébalo
+                                        <a class="btn btn-light btn-lg btn-default external" href="register.html">Pruébalo
                                             gratis</a>
                                         <a class="btn btn-lg btn-outline-dark external" href="home.html">Iniciar
                                             Sesion</a>
@@ -78,15 +71,13 @@
                         <div class="mx-auto main-hero" style="background-image: url(images/background/portada-2.jpg);">
                             <div class="container">
                                 <div class="col-xl-6 col-lg-8 col-md-9 fs-5">
-                                    <h1 class="mb-3 main-hero__title">¡Descubre la magia de la música <span
-                                            class="text-primary">que llena tu alma!</span></h1>
+                                    <h1 class="mb-3 main-hero__title">¡Descubre la magia de la música <span class="text-primary">que llena tu alma!</span></h1>
                                     <div class="me-sm-5">
                                         <p>Sumérgete en un mundo de listas de reproducción y álbumes inspirados en tus
                                             artistas y géneros favoritos. ¡Experimenta la emoción de cada nota y deja
                                             que la
                                             música te lleve a un viaje inolvidable! </p>
-                                        <a class="btn btn-light btn-lg btn-default external"
-                                            href="register.html">Pruébalo
+                                        <a class="btn btn-light btn-lg btn-default external" href="register.html">Pruébalo
                                             gratis</a>
                                         <a class="btn btn-lg btn-outline-dark external" href="home.html">Iniciar
                                             Sesion</a>
@@ -99,14 +90,12 @@
                         <div class="mx-auto main-hero" style="background-image: url(images/background/portada-5.jpg);">
                             <div class="container">
                                 <div class="col-xl-6 col-lg-8 col-md-9 fs-5">
-                                    <h1 class="mb-3 main-hero__title">¡Descubre el ritmo que hace <span
-                                            class="text-primary">latir tu corazón!</span></h1>
+                                    <h1 class="mb-3 main-hero__title">¡Descubre el ritmo que hace <span class="text-primary">latir tu corazón!</span></h1>
                                     <div class="me-sm-5">
                                         <p class="text-white">Sumérgete en un mundo musical lleno de listas de
                                             reproducción
                                             y álbumes que capturan la esencia de tus artistas y géneros favoritos. </p>
-                                        <a class="btn btn-light btn-lg btn-default external "
-                                            href="register.html">Pruébalo
+                                        <a class="btn btn-light btn-lg btn-default external " href="register.html">Pruébalo
                                             gratis</a>
                                         <a class="btn btn-lg btn-outline-dark external" href="home.html">Iniciar
                                             Sesion</a>
@@ -116,13 +105,11 @@
                         </div>
                     </div>
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="prev">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Previous</span>
                 </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                    data-bs-slide="next">
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     <span class="visually-hidden">Next</span>
                 </button>
@@ -489,22 +476,18 @@
                                 </div>
                                 <div class="mb-4 col-sm-6">
                                     <label for="mail" class="form-label fw-medium">Correo</label>
-                                    <input type="text" id="mail" class="form-control"
-                                        placeholder="johndoe@xzy.com">
+                                    <input type="text" id="mail" class="form-control" placeholder="johndoe@xzy.com">
                                 </div>
                                 <div class="mb-4 col-sm-6">
                                     <label for="phone" class="form-label fw-medium">Telefono</label>
-                                    <input type="text" id="phone" class="form-control"
-                                        placeholder="000 1111 222 333">
+                                    <input type="text" id="phone" class="form-control" placeholder="000 1111 222 333">
                                 </div>
                                 <div class="mb-4 col-12">
                                     <label for="message" class="form-label fw-medium">Mensaje</label>
-                                    <textarea name="message" id="message" cols="30" rows="4" class="form-control"
-                                        placeholder="Write here..."></textarea>
+                                    <textarea name="message" id="message" cols="30" rows="4" class="form-control" placeholder="Write here..."></textarea>
                                 </div>
                                 <div class="text-center col-12">
-                                    <button type="button" class="btn btn-primary"
-                                        style="min-width: 180px;">Enviar</button>
+                                    <button type="button" class="btn btn-primary" style="min-width: 180px;">Enviar</button>
                                 </div>
                             </form>
                         </div>
@@ -524,70 +507,6 @@
                 </div>
             </div>
         </div>
-
-        <div id="setting" class="show"><a href="javascript:void(0);" id="setting_toggler">Settings</a>
-            <div class="setting__wrapper">
-                <div class="setting__head">Theme Settings</div>
-                <div class="setting__body">
-                    <div class="setting__body__item"><span class="setting__title">Theme</span>
-                        <div class="setting__options"><a href="javascript:void(0);"
-                                class="setting__option setting__option--light active" data-theme-option="light"></a><a
-                                href="javascript:void(0);" class="setting__option setting__option--dark"
-                                data-theme-option="dark"></a></div>
-                    </div>
-                    <div class="setting__body__item"><span class="setting__title">Header</span>
-                        <div class="setting__options"><a href="javascript:void(0);"
-                                class="setting__option setting__option--yellow" data-header-option="yellow"></a><a
-                                href="javascript:void(0);" class="setting__option setting__option--orange active"
-                                data-header-option="orange"></a><a href="javascript:void(0);"
-                                class="setting__option setting__option--red" data-header-option="red"></a><a
-                                href="javascript:void(0);" class="setting__option setting__option--green"
-                                data-header-option="green"></a><a href="javascript:void(0);"
-                                class="setting__option setting__option--blue" data-header-option="blue"></a><a
-                                href="javascript:void(0);" class="setting__option setting__option--purple"
-                                data-header-option="purple"></a><a href="javascript:void(0);"
-                                class="setting__option setting__option--indigo" data-header-option="indigo"></a><a
-                                href="javascript:void(0);" class="setting__option setting__option--dark"
-                                data-header-option="dark"></a></div>
-                    </div>
-                    <div class="setting__body__item"><span class="setting__title">Sidebar</span>
-                        <div class="setting__options"><a href="javascript:void(0);"
-                                class="setting__option setting__option--yellow" data-sidebar-option="yellow"></a><a
-                                href="javascript:void(0);" class="setting__option setting__option--orange"
-                                data-sidebar-option="orange"></a><a href="javascript:void(0);"
-                                class="setting__option setting__option--red" data-sidebar-option="red"></a><a
-                                href="javascript:void(0);" class="setting__option setting__option--green"
-                                data-sidebar-option="green"></a><a href="javascript:void(0);"
-                                class="setting__option setting__option--blue active" data-sidebar-option="blue"></a><a
-                                href="javascript:void(0);" class="setting__option setting__option--purple"
-                                data-sidebar-option="purple"></a><a href="javascript:void(0);"
-                                class="setting__option setting__option--indigo" data-sidebar-option="indigo"></a><a
-                                href="javascript:void(0);" class="setting__option setting__option--dark"
-                                data-sidebar-option="dark"></a></div>
-                    </div>
-                    <div class="setting__body__item"><span class="setting__title">Player</span>
-                        <div class="setting__options"><a href="javascript:void(0);"
-                                class="setting__option setting__option--yellow" data-player-option="yellow"></a><a
-                                href="javascript:void(0);" class="setting__option setting__option--orange"
-                                data-player-option="orange"></a><a href="javascript:void(0);"
-                                class="setting__option setting__option--red" data-player-option="red"></a><a
-                                href="javascript:void(0);" class="setting__option setting__option--green"
-                                data-player-option="green"></a><a href="javascript:void(0);"
-                                class="setting__option setting__option--blue active" data-player-option="blue"></a><a
-                                href="javascript:void(0);" class="setting__option setting__option--purple"
-                                data-player-option="purple"></a><a href="javascript:void(0);"
-                                class="setting__option setting__option--indigo" data-player-option="indigo"></a><a
-                                href="javascript:void(0);" class="setting__option setting__option--dark"
-                                data-player-option="dark"></a></div>
-                    </div>
-                    <p class="mt-4">Note: You can see the color change effect of the header, sidebar and player in
-                        the inner pages.</p>
-                </div>
-            </div>
-        </div>
-
-
-
         <!-- End:: main section -->
 
         <!-- Start:: main section [[ Find at scss/framework/section.scss ]] -->
@@ -749,22 +668,8 @@
         </div>
 
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-        <script>
-            $(document).ready(function() {
-                $("#setting_toggler").click(function() {
-                    $("#setting").toggleClass("show");
-                });
-
-                // Agrega este bloque adicional para cerrar el panel al hacer clic en cualquier parte fuera de él
-                $(document).click(function(event) {
-                    if (!$(event.target).closest("#setting").length && !$(event.target).is(
-                            "#setting_toggler")) {
-                        $("#setting").removeClass("show");
-                    }
-                });
-            });
-        </script>
+        <script src="{{ asset('dist/js/plugins.bundle.js') }}"></script>
+        <script src="{{ asset('dist/js/scripts.bundle.js') }}"></script>
     </body>
 
 
