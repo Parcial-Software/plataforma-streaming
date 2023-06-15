@@ -8,7 +8,7 @@
         <!-- Start:: loader [[ Find at scss/framework/loader.scss ]] -->
         <div id="loader">
             <div class="loader">
-                <div class="loader__eq mx-auto">
+                <div class="mx-auto loader__eq">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -16,7 +16,7 @@
                     <span></span>
                     <span></span>
                 </div>
-                <span class="loader__text mt-2">Loading</span>
+                <span class="mt-2 loader__text">Loading</span>
             </div>
         </div>
         <!-- End:: loader -->
@@ -28,10 +28,10 @@
             <main id="page_content">
 
                 <!-- Hero [[ Find at scss/framework/hero.scss ]] -->
-                <div class="hero" style="background-image: url(images/banner/song.jpg);"></div>
+                <div class="hero" style="background-image: url(images/banner/portada-1.png);"></div>
 
                 <!-- Start:: under hero [[ Find at scss/framework/hero.scss ]] -->
-                <div class="under-hero container">
+                <div class="container under-hero">
 
                     <!-- Start:: section [[ Find at scss/framework/section.scss ]] -->
                     <div class="section">
@@ -668,10 +668,6 @@
         <!-- Backdrop [[ Find at scss/framework/wrapper.scss ]] -->
         <div id="backdrop"></div>
 
-
-        <!-- Scripts -->
-        <script src="dist/js/plugins.bundle.js"></script>
-        <script src="dist/js/scripts.bundle.js"></script>
 
     </body>
 

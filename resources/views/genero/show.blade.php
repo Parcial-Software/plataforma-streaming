@@ -8,7 +8,7 @@
     <!-- Start:: loader [[ Find at scss/framework/loader.scss ]] -->
     <div id="loader">
         <div class="loader">
-            <div class="loader__eq mx-auto">
+            <div class="mx-auto loader__eq">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -16,7 +16,7 @@
                 <span></span>
                 <span></span>
             </div>
-            <span class="loader__text mt-2">Loading</span>
+            <span class="mt-2 loader__text">Loading</span>
         </div>
     </div>
     <!-- End:: loader -->
@@ -28,19 +28,18 @@
         <main id="page_content">
 
              <!-- Hero [[ Find at scss/framework/hero.scss ]] -->
-            <div class="hero" style="background-image: url(images/banner/song.jpg);"></div>
+            <div class="hero" style="background-image: url(images/banner/portada-2.png);"></div>
 
             <!-- Start:: under hero [[ Find at scss/framework/hero.scss ]] -->
-            <div class="under-hero container">
+            <div class="container under-hero">
 
                 <!-- Start:: section [[ Find at scss/framework/section.scss ]] -->
                 <div class="section">
                     <div class="section__head">
-                        <h3 class="mb-0">Songs</h3>
+                        <h3 class="mb-0">Remix</h3>
                     </div>
-
                     <!-- Start:: list [[ Find at scss/components/list.scss ]] -->
-                    <div class="list list--order">
+                    <div class="list">
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="list__item" 
@@ -65,7 +64,7 @@
                                     </div>
                                     <ul class="list__option">
                                         <li>
-                                            <a href="javascript:void(0);" role="button" class="d-inline-flex active" aria-label="Favorite" data-favorite-id="1">
+                                            <a href="javascript:void(0);" role="button" class="d-inline-flex" aria-label="Favorite" data-favorite-id="1">
                                                 <i class="ri-heart-line heart-empty"></i>
                                                 <i class="ri-heart-fill heart-fill"></i>
                                             </a>
@@ -108,7 +107,7 @@
                                     </div>
                                     <ul class="list__option">
                                         <li>
-                                            <a href="javascript:void(0);" role="button" class="d-inline-flex active" aria-label="Favorite" data-favorite-id="2">
+                                            <a href="javascript:void(0);" role="button" class="d-inline-flex" aria-label="Favorite" data-favorite-id="2">
                                                 <i class="ri-heart-line heart-empty"></i>
                                                 <i class="ri-heart-fill heart-fill"></i>
                                             </a>
@@ -151,7 +150,7 @@
                                     </div>
                                     <ul class="list__option">
                                         <li>
-                                            <a href="javascript:void(0);" role="button" class="d-inline-flex active" aria-label="Favorite" data-favorite-id="3">
+                                            <a href="javascript:void(0);" role="button" class="d-inline-flex" aria-label="Favorite" data-favorite-id="3">
                                                 <i class="ri-heart-line heart-empty"></i>
                                                 <i class="ri-heart-fill heart-fill"></i>
                                             </a>
@@ -194,7 +193,7 @@
                                     </div>
                                     <ul class="list__option">                                       
                                         <li>
-                                            <a href="javascript:void(0);" role="button" class="d-inline-flex active" aria-label="Favorite" data-favorite-id="4">
+                                            <a href="javascript:void(0);" role="button" class="d-inline-flex" aria-label="Favorite" data-favorite-id="4">
                                                 <i class="ri-heart-line heart-empty"></i>
                                                 <i class="ri-heart-fill heart-fill"></i>
                                             </a>
@@ -242,7 +241,7 @@
                                             </span>
                                         </li>                                          
                                         <li>
-                                            <a href="javascript:void(0);" role="button" class="d-inline-flex active" aria-label="Favorite" data-favorite-id="5">
+                                            <a href="javascript:void(0);" role="button" class="d-inline-flex" aria-label="Favorite" data-favorite-id="5">
                                                 <i class="ri-heart-line heart-empty"></i>
                                                 <i class="ri-heart-fill heart-fill"></i>
                                             </a>
@@ -287,7 +286,7 @@
                                     </div>
                                     <ul class="list__option">                                        
                                         <li>
-                                            <a href="javascript:void(0);" role="button" class="d-inline-flex active" aria-label="Favorite" data-favorite-id="6">
+                                            <a href="javascript:void(0);" role="button" class="d-inline-flex" aria-label="Favorite" data-favorite-id="6">
                                                 <i class="ri-heart-line heart-empty"></i>
                                                 <i class="ri-heart-fill heart-fill"></i>
                                             </a>
@@ -335,7 +334,7 @@
                                             </span>
                                         </li>                                        
                                         <li>
-                                            <a href="javascript:void(0);" role="button" class="d-inline-flex active" aria-label="Favorite" data-favorite-id="7">
+                                            <a href="javascript:void(0);" role="button" class="d-inline-flex" aria-label="Favorite" data-favorite-id="7">
                                                 <i class="ri-heart-line heart-empty"></i>
                                                 <i class="ri-heart-fill heart-fill"></i>
                                             </a>
@@ -383,7 +382,7 @@
                                             </span>
                                         </li>                                        
                                         <li>
-                                            <a href="javascript:void(0);" role="button" class="d-inline-flex active" aria-label="Favorite" data-favorite-id="8">
+                                            <a href="javascript:void(0);" role="button" class="d-inline-flex" aria-label="Favorite" data-favorite-id="8">
                                                 <i class="ri-heart-line heart-empty"></i>
                                                 <i class="ri-heart-fill heart-fill"></i>
                                             </a>
@@ -426,7 +425,7 @@
                                     </div>
                                     <ul class="list__option">                                      
                                         <li>
-                                            <a href="javascript:void(0);" role="button" class="d-inline-flex active" aria-label="Favorite" data-favorite-id="9">
+                                            <a href="javascript:void(0);" role="button" class="d-inline-flex" aria-label="Favorite" data-favorite-id="9">
                                                 <i class="ri-heart-line heart-empty"></i>
                                                 <i class="ri-heart-fill heart-fill"></i>
                                             </a>
@@ -469,7 +468,7 @@
                                     </div>
                                     <ul class="list__option">                                        
                                         <li>
-                                            <a href="javascript:void(0);" role="button" class="d-inline-flex active" aria-label="Favorite" data-favorite-id="10">
+                                            <a href="javascript:void(0);" role="button" class="d-inline-flex" aria-label="Favorite" data-favorite-id="10">
                                                 <i class="ri-heart-line heart-empty"></i>
                                                 <i class="ri-heart-fill heart-fill"></i>
                                             </a>
@@ -494,172 +493,111 @@
                         </div>                        
                     </div>
                     <!-- End:: list -->
+
+                    <div class="mt-5 text-center">
+                        <a href="javascript:void(0);" class="btn btn-primary">
+                            <div class="btn__wrap">
+                                <i class="ri-loader-3-fill"></i>
+                                <span>Load more</span>
+                            </div>
+                        </a>
+                    </div>
                 </div>
                 <!-- End:: section -->
 
                 <!-- Start:: section [[ Find at scss/framework/section.scss ]] -->
                 <div class="section">
                     <div class="section__head">
-                        <h3 class="mb-0">Albums</h3>
+                        <h3 class="mb-0">Discover <span class="text-primary">Genres</span></h3>
                     </div>
 
-                    <div class="row g-4">
-                        <div class="col-6 col-xl-2 col-md-3 col-sm-4">
-                            <!-- Start:: cover [[ Find at scss/components/cover.scss ]] -->
-                            <div class="cover cover--round">
-                                <div class="cover__head">
-                                    <ul class="cover__label d-flex">
-                                        <li>
-                                            <span class="badge rounded-pill bg-danger">
-                                                <i class="ri-heart-fill"></i>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                    <div class="cover__options dropstart d-inline-flex ms-auto">
-                                        <a class="dropdown-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-label="Cover options" aria-expanded="false">
-                                            <i class="ri-more-2-fill"></i>
+                    <!-- Start:: swiper carousel [[ Find at scss/components/swiper.scss ]] -->
+                    <div class="swiper-carousel">
+                        <!-- Start:: swiper [[ Find at scss/components/swiper.scss ]] -->
+                        <div class="swiper" data-swiper-slides="4" data-swiper-autoplay="true">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <!-- Start:: cover [[ Find at scss/components/cover.scss ]] -->
+                                    <div class="cover cover--round">
+                                        <a href="genre-details.html" class="cover__image">
+                                            <img src="images/background/horizontal/3.jpg" alt="Sufi">
+                                            <div class="cover__image__content">
+                                                <span class="mb-1 cover__title fs-6 text-truncate">Sufi</span>
+                                            </div>
                                         </a>
-                                        <ul class="dropdown-menu dropdown-menu-sm">
-                                            <li><a class="dropdown-item" href="javascript:void(0);" role="button" data-favorite-id="100">Favorite</a></li>
-                                            <li><a class="dropdown-item" href="audio/ringtone-1.mp3" download>Download</a></li>
-                                            <li><a class="dropdown-item" href="javascript:void(0);" role="button">Share</a></li>
-                                            <li class="dropdown-divider"></li>
-                                            <li><a class="dropdown-item" href="album-details.html">View details</a></li>
-                                        </ul>
                                     </div>
+                                    <!-- End:: cover -->
                                 </div>
-                                <a href="album-details.html" class="cover__image">
-                                    <img src="images/cover/large/1.jpg" alt="Mummy">
-                                </a>
-                                <div class="cover__foot">
-                                    <a href="album-details.html" class="cover__title text-truncate">Mummy</a>
-                                    <p class="cover__subtitle text-truncate">
-                                        <a href="artist-details.html">Arebica Luna</a>
-                                    </p>
+                                <div class="swiper-slide">
+                                    <!-- Start:: cover [[ Find at scss/components/cover.scss ]] -->
+                                    <div class="cover cover--round">
+                                        <a href="genre-details.html" class="cover__image">
+                                            <img src="images/background/horizontal/4.jpg" alt="Romantic">
+                                            <div class="cover__image__content">
+                                                <span class="mb-1 cover__title fs-6 text-truncate">Romantic</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- End:: cover -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- Start:: cover [[ Find at scss/components/cover.scss ]] -->
+                                    <div class="cover cover--round">
+                                        <a href="genre-details.html" class="cover__image">
+                                            <img src="images/background/horizontal/5.jpg" alt="Sports">
+                                            <div class="cover__image__content">
+                                                <span class="mb-1 cover__title fs-6 text-truncate">Sports</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- End:: cover -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- Start:: cover [[ Find at scss/components/cover.scss ]] -->
+                                    <div class="cover cover--round">
+                                        <a href="genre-details.html" class="cover__image">
+                                            <img src="images/background/horizontal/6.jpg" alt="Retro">
+                                            <div class="cover__image__content">
+                                                <span class="mb-1 cover__title fs-6 text-truncate">Retro</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- End:: cover -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- Start:: cover [[ Find at scss/components/cover.scss ]] -->
+                                    <div class="cover cover--round">
+                                        <a href="genre-details.html" class="cover__image">
+                                            <img src="images/background/horizontal/3.jpg" alt="Stories">
+                                            <div class="cover__image__content">
+                                                <span class="mb-1 cover__title fs-6 text-truncate">Stories</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- End:: cover -->
+                                </div>
+                                <div class="swiper-slide">
+                                    <!-- Start:: cover [[ Find at scss/components/cover.scss ]] -->
+                                    <div class="cover cover--round">
+                                        <a href="genre-details.html" class="cover__image">
+                                            <img src="images/background/horizontal/5.jpg" alt="Meditation & Workout">
+                                            <div class="cover__image__content">
+                                                <span class="mb-1 cover__title fs-6 text-truncate">Meditation & Workout</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <!-- End:: cover -->
                                 </div>
                             </div>
-                            <!-- End:: cover -->
                         </div>
-                        <div class="col-6 col-xl-2 col-md-3 col-sm-4">
-                            <!-- Start:: cover [[ Find at scss/components/cover.scss ]] -->
-                            <div class="cover cover--round">
-                                <div class="cover__head">
-                                    <ul class="cover__label d-flex">
-                                        <li>
-                                            <span class="badge rounded-pill bg-danger">
-                                                <i class="ri-heart-fill"></i>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                    <div class="cover__options dropstart d-inline-flex ms-auto">
-                                        <a class="dropdown-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-label="Cover options" aria-expanded="false">
-                                            <i class="ri-more-2-fill"></i>
-                                        </a>
-                                        <ul class="dropdown-menu dropdown-menu-sm">
-                                            <li><a class="dropdown-item" href="javascript:void(0);" role="button" data-favorite-id="102">Favorite</a></li>
-                                            <li><a class="dropdown-item" href="audio/ringtone-3.mp3" download>Download</a></li>
-                                            <li><a class="dropdown-item" href="javascript:void(0);" role="button">Share</a></li>
-                                            <li class="dropdown-divider"></li>
-                                            <li><a class="dropdown-item" href="album-details.html">View details</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <a href="album-details.html" class="cover__image">
-                                    <img src="images/cover/large/3.jpg" alt="Own way">
-                                </a>
-                                <div class="cover__foot">
-                                    <a href="album-details.html" class="cover__title text-truncate">Own way</a>
-                                    <p class="cover__subtitle text-truncate">
-                                        <a href="artist-details.html">Zunira Willy</a>,
-                                        <a href="artist-details.html">Nutty Nina</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- End:: cover -->
-                        </div>
-                        <div class="col-6 col-xl-2 col-md-3 col-sm-4">
-                            <!-- Start:: cover [[ Find at scss/components/cover.scss ]] -->
-                            <div class="cover cover--round">
-                                <div class="cover__head">
-                                    <ul class="cover__label d-flex">
-                                        <li>
-                                            <span class="badge rounded-pill bg-danger">
-                                                <i class="ri-heart-fill"></i>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="badge rounded-pill bg-info">
-                                                <i class="ri-vip-crown-fill"></i>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                    <div class="cover__options dropstart d-inline-flex ms-auto">
-                                        <a class="dropdown-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-label="Cover options" aria-expanded="false">
-                                            <i class="ri-more-2-fill"></i>
-                                        </a>
-                                        <ul class="dropdown-menu dropdown-menu-sm">
-                                            <li><a class="dropdown-item" href="javascript:void(0);" role="button" data-favorite-id="103">Favorite</a></li>
-                                            <li><a class="dropdown-item" href="audio/ringtone-4.mp3" download>Download</a></li>
-                                            <li><a class="dropdown-item" href="javascript:void(0);" role="button">Share</a></li>
-                                            <li class="dropdown-divider"></li>
-                                            <li><a class="dropdown-item" href="album-details.html">View details</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <a href="album-details.html" class="cover__image">
-                                    <img src="images/cover/large/4.jpg" alt="Say yes">
-                                </a>
-                                <div class="cover__foot">
-                                    <a href="album-details.html" class="cover__title text-truncate">Say yes</a>
-                                    <p class="cover__subtitle text-truncate">
-                                        <a href="artist-details.html">Johnny Marro</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- End:: cover -->
-                        </div>
-                        <div class="col-6 col-xl-2 col-md-3 col-sm-4">
-                            <!-- Start:: cover [[ Find at scss/components/cover.scss ]] -->
-                            <div class="cover cover--round">
-                                <div class="cover__head">
-                                    <ul class="cover__label d-flex">
-                                        <li>
-                                            <span class="badge rounded-pill bg-danger">
-                                                <i class="ri-heart-fill"></i>
-                                            </span>
-                                        </li>
-                                        <li>
-                                            <span class="badge rounded-pill bg-info">
-                                                <i class="ri-vip-crown-fill"></i>
-                                            </span>
-                                        </li>
-                                    </ul>
-                                    <div class="cover__options dropstart d-inline-flex ms-auto">
-                                        <a class="dropdown-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-label="Cover options" aria-expanded="false">
-                                            <i class="ri-more-2-fill"></i>
-                                        </a>
-                                        <ul class="dropdown-menu dropdown-menu-sm">
-                                            <li><a class="dropdown-item" href="javascript:void(0);" role="button" data-favorite-id="105">Favorite</a></li>
-                                            <li><a class="dropdown-item" href="audio/ringtone-6.mp3" download>Download</a></li>
-                                            <li><a class="dropdown-item" href="javascript:void(0);" role="button">Share</a></li>
-                                            <li class="dropdown-divider"></li>
-                                            <li><a class="dropdown-item" href="album-details.html">View details</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <a href="album-details.html" class="cover__image">
-                                    <img src="images/cover/large/6.jpg" alt="Find soul">
-                                </a>
-                                <div class="cover__foot">
-                                    <a href="album-details.html" class="cover__title text-truncate">Find soul</a>
-                                    <p class="cover__subtitle text-truncate">
-                                        <a href="artist-details.html">Rasomi Pelina</a>
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- End:: cover -->
-                        </div>
+                        <!-- End:: swiper -->
+
+                        <!-- Swiper controls -->
+                        <div class="swiper-button-prev btn-default rounded-pill"></div>
+                        <div class="swiper-button-next btn-default rounded-pill"></div>
                     </div>
+                    <!-- End:: swiper carousel -->
+
                 </div>
                 <!-- End:: section -->
 
@@ -676,9 +614,6 @@
     <div id="backdrop"></div>
 
 
-    <!-- Scripts -->
-    <script src="dist/js/plugins.bundle.js"></script>
-    <script src="dist/js/scripts.bundle.js"></script>
-
 </body>
+
 </x-app-layout>
