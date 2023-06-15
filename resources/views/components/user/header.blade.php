@@ -321,7 +321,7 @@
                              <div class="avatar__image">
                                  <img src="images/users/thumb.jpg" alt="user">
                              </div>
-                             <span class="ps-2 d-none d-sm-block">Androws</span>
+                             <span class="ps-2 d-none d-sm-block">{{auth()->user()->name}}</span>
                          </a>
                          <ul class="dropdown-menu dropdown-menu-md dropdown-menu-end" aria-labelledby="user_menu">
                              <li>
@@ -330,7 +330,7 @@
                                          <img src="images/users/thumb.jpg" alt="user">
                                      </div>
                                      <div class="avatar__content">
-                                         <span class="avatar__title">Androws Kinny</span>
+                                         <span class="avatar__title">{{auth()->user()->name}}</span>
                                          <span class="avatar__subtitle">Artist</span>
                                      </div>
                                  </div>
@@ -362,10 +362,13 @@
                              </li>
                              <li class="dropdown-divider"></li>
                              <li>
-                                 <a class="dropdown-item d-flex align-items-center external text-danger" href="index.html">
-                                     <i class="ri-logout-circle-line fs-5"></i>
-                                     <span class="ps-2">Logout</span>
-                                 </a>
+                                 <form method="POST" action="{{ route('logout') }}">
+                                     @csrf
+                                     <button type="submit" class="dropdown-item d-flex align-items-center external text-danger" style="background: none; border: none; cursor: pointer;">
+                                         <i class="ri-logout-circle-line fs-5"></i>
+                                         <span class="ps-2">Logout</span>
+                                     </button>
+                                 </form>
                              </li>
                          </ul>
                      </div>

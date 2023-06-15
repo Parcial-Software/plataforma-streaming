@@ -19,10 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('dashboard.home');
-})->name('dashboard.home');
-
 Route::get('/music', function () {
     return view('musica.music');
 })->name('musica.music');
@@ -68,6 +64,6 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('dashboard.home');
     })->name('dashboard');
 });

@@ -34,19 +34,24 @@
                                 <h4>Regístrate en <span class="text-primary">SoundStream</span></h4>
                                 <p class="fs-6">Es hora de unirte a SoundStream y disfrutar de una experiencia musical
                                     increíble.</p>
-                                <form action="#" class="mt-5">
+                                <form action="{{ route('register') }}" method="POST" class="mt-5">
+                                @csrf
+                                <div class="mb-3">
+                                        <label for="name" class="form-label fw-medium">Nombre</label>
+                                        <input type="text" name="name" id="name" class="form-control">
+                                    </div>
                                     <div class="mb-3">
                                         <label for="email" class="form-label fw-medium">Correo electrónico</label>
-                                        <input type="text" id="email" class="form-control">
+                                        <input type="text" name="email" id="email" class="form-control">
                                     </div>
                                     <div class="mb-2">
                                         <label for="password" class="form-label fw-medium">Contraseña</label>
-                                        <input type="password" id="password" class="form-control">
+                                        <input type="password" name="password" id="password" class="form-control">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="c_password" class="form-label fw-medium">Confirmar
+                                        <label for="password_confirmation" class="form-label fw-medium">Confirmar
                                             Contraseña</label>
-                                        <input type="password" id="c_password" class="form-control">
+                                        <input type="password" name="password_confirmation" id="password_confirmation" class="form-control">
                                     </div>
                                     <div class="mb-4">
                                         <div class="mb-0 form-check">
@@ -56,7 +61,7 @@
                                         </div>
                                     </div>
                                     <div class="mb-5">
-                                        <input type="submit" class="btn btn-primary w-100" value="Iniciar Sesión">
+                                        <input type="submit" class="btn btn-primary w-100" value="Registrarme">
                                     </div>
                                     <p>¿Ya tienes una cuenta? <br><a href="login.html"
                                             class="fw-medium external">Iniciar Sesión</a></p>

@@ -33,14 +33,15 @@
                                 <div class="card-body p-sm-5">
                                     <h4>Iniciar sesión en <span class="text-primary">SoundStream</span></h4>
                                     <p class="fs-6">¡Bienvenido de nuevo! Inicia sesión con tus datos que ingresaste durante el registro</p>
-                                    <form action="#" class="mt-5">
+                                    <form action="{{ route('login') }}" method="POST" class="mt-5">
+                                    @csrf
                                         <div class="mb-3">
-                                            <label for="username" class="form-label fw-medium">Correo</label>
-                                            <input type="text" id="username" class="form-control">
+                                            <label for="email" class="form-label fw-medium">Correo</label>
+                                            <input type="text" name="email" id="email" class="form-control">
                                         </div>
                                         <div class="mb-2">
                                             <label for="password" class="form-label fw-medium">Contraseña</label>
-                                            <input type="password" id="password" class="form-control">
+                                            <input type="password" name="password" id="password" class="form-control">
                                         </div>
                                         <div class="mb-4 text-end">
                                             <a href="#" class="link-primary fw-medium">¿Olvidaste tu contraseña?</a>
