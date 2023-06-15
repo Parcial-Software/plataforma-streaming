@@ -57,6 +57,14 @@ Route::get('/albums', function(){
     return view('album.albums');
 })->name('album.albums');
 
+Route::get('/artists', function(){
+    return view('artists.artists');
+})->name('artists.artists');
+
+Route::get('/history', function(){
+    return view('history.history');
+})->name('history.history');
+
 
 Route::middleware([
     'auth:sanctum',
