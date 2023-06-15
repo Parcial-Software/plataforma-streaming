@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\GeneroController;
+use App\Models\Genero;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,40 +24,43 @@ Route::get('/home', function () {
 })->name('dashboard.home');
 
 Route::get('/music', function () {
-    return view('dashboard.music');
-})->name('dashboard.music');
+    return view('musica.music');
+})->name('musica.music');
 
-Route::get('/generos', function () {
-    return view('dashboard.generos');
-})->name('dashboard.generos');
+Route::resource('generos', GeneroController::class);
 
 Route::get('/generos_detalles', function () {
-    return view('dashboard.generos_detalles');
-})->name('dashboard.generos_detalles');
+    return view('genero.generos_detalles');
+})->name('genero.generos_detalles');
 
 Route::get('/analisis', function () {
     return view('dashboard.analisis');
 })->name('dashboard.analisis');
 
 Route::get('/favoritos', function () {
-    return view('dashboard.favoritos');
-})->name('dashboard.favoritos');
+    return view('favorito.favoritos');
+})->name('favorito.favoritos');
 
 Route::get('/eventos', function () {
-    return view('dashboard.eventos');
-})->name('dashboard.eventos');
+    return view('evento.eventos');
+})->name('evento.eventos');
 
 Route::get('/eventos_detalles', function () {
-    return view('dashboard.eventos_detalles');
-})->name('dashboard.eventos_detalles');
+    return view('evento.eventos_detalles');
+})->name('evento.eventos_detalles');
 
 Route::get('/crear_evento', function () {
-    return view('dashboard.crear_evento');
-})->name('dashboard.crear_evento');
+    return view('evento.crear_evento');
+})->name('evento.crear_evento');
 
 Route::get('/añadir_musica', function () {
-    return view('dashboard.añadir_musica');
-})->name('dashboard.añadir_musica');
+    return view('musica.añadir_musica');
+})->name('musica.añadir_musica');
+
+Route::get('/albums', function(){
+    return view('album.albums');
+})->name('album.albums');
+
 
 Route::middleware([
     'auth:sanctum',

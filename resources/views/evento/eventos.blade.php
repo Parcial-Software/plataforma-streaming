@@ -8,7 +8,7 @@
     <!-- Start:: loader [[ Find at scss/framework/loader.scss ]] -->
     <div id="loader">
         <div class="loader">
-            <div class="loader__eq mx-auto">
+            <div class="mx-auto loader__eq">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -16,7 +16,7 @@
                 <span></span>
                 <span></span>
             </div>
-            <span class="loader__text mt-2">Loading</span>
+            <span class="mt-2 loader__text">Loading</span>
         </div>
     </div>
     <!-- End:: loader -->
@@ -28,10 +28,10 @@
         <main id="page_content">
 
              <!-- Hero [[ Find at scss/framework/hero.scss ]] -->
-            <div class="hero" style="background-image: url(images/banner/event.jpg)"></div>
+            <div class="hero" style="background-image: url(images/banner/portada-4.png)"></div>
 
             <!-- Start:: under hero [[ Find at scss/framework/hero.scss ]] -->
-            <div class="under-hero container">
+            <div class="container under-hero">
 
                 <!-- Start:: section [[ Find at scss/framework/section.scss ]] -->
                 <div class="section">
@@ -54,12 +54,12 @@
                                 <a href="event-details.html" class="cover__image">
                                     <img src="images/background/horizontal/2.jpg" alt="Event cover">
                                 </a>
-                                <div class="cover__foot mt-3 px-2">
-                                    <p class="cover__subtitle d-flex mb-2">
+                                <div class="px-2 mt-3 cover__foot">
+                                    <p class="mb-2 cover__subtitle d-flex">
                                         <i class="ri-map-pin-fill fs-6"></i>
                                         <span class="ms-1 fw-semi-bold">258 Goff Avenue, MI - USA</span>
                                     </p>
-                                    <a href="event-details.html" class="cover__title fs-6 mb-3">New year 1st night with BendiQ Band</a>
+                                    <a href="event-details.html" class="mb-3 cover__title fs-6">New year 1st night with BendiQ Band</a>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <!-- Start:: avatar group [[ Find at scss/components/avatar.scss ]] -->
@@ -95,12 +95,12 @@
                                 <a href="event-details.html" class="cover__image">
                                     <img src="images/background/horizontal/3.jpg" alt="Event cover">
                                 </a>
-                                <div class="cover__foot mt-3 px-2">
-                                    <p class="cover__subtitle d-flex mb-2">
+                                <div class="px-2 mt-3 cover__foot">
+                                    <p class="mb-2 cover__subtitle d-flex">
                                         <i class="ri-map-pin-fill fs-6"></i>
                                         <span class="ms-1 fw-semi-bold">2105 Badger Pond Lane, FL - USA</span>
                                     </p>
-                                    <a href="event-details.html" class="cover__title fs-6 mb-3">Varida Meronny music band</a>
+                                    <a href="event-details.html" class="mb-3 cover__title fs-6">Varida Meronny music band</a>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <!-- Start:: avatar group [[ Find at scss/components/avatar.scss ]] -->
@@ -136,12 +136,12 @@
                                 <a href="event-details.html" class="cover__image">
                                     <img src="images/background/horizontal/1.jpg" alt="Event cover">
                                 </a>
-                                <div class="cover__foot mt-3 px-2">
-                                    <p class="cover__subtitle d-flex mb-2">
+                                <div class="px-2 mt-3 cover__foot">
+                                    <p class="mb-2 cover__subtitle d-flex">
                                         <i class="ri-map-pin-fill fs-6"></i>
                                         <span class="ms-1 fw-semi-bold">2801 Pine Lake Rd, TX - USA</span>
                                     </p>
-                                    <a href="event-details.html" class="cover__title fs-6 mb-3">Music night virtual event to welcome new year</a>
+                                    <a href="event-details.html" class="mb-3 cover__title fs-6">Music night virtual event to welcome new year</a>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <!-- Start:: avatar group [[ Find at scss/components/avatar.scss ]] -->
@@ -177,12 +177,12 @@
                                 <a href="event-details.html" class="cover__image">
                                     <img src="images/background/horizontal/2.jpg" alt="Event cover">
                                 </a>
-                                <div class="cover__foot mt-3 px-2">
-                                    <p class="cover__subtitle d-flex mb-2">
+                                <div class="px-2 mt-3 cover__foot">
+                                    <p class="mb-2 cover__subtitle d-flex">
                                         <i class="ri-map-pin-fill fs-6"></i>
                                         <span class="ms-1 fw-semi-bold">258 Goff Avenue, MI - USA</span>
                                     </p>
-                                    <a href="event-details.html" class="cover__title fs-6 mb-3">New year 1st night with BendiQ Band</a>
+                                    <a href="event-details.html" class="mb-3 cover__title fs-6">New year 1st night with BendiQ Band</a>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <!-- Start:: avatar group [[ Find at scss/components/avatar.scss ]] -->
@@ -218,12 +218,12 @@
                                 <a href="event-details.html" class="cover__image">
                                     <img src="images/background/horizontal/3.jpg" alt="Event cover">
                                 </a>
-                                <div class="cover__foot mt-3 px-2">
-                                    <p class="cover__subtitle d-flex mb-2">
+                                <div class="px-2 mt-3 cover__foot">
+                                    <p class="mb-2 cover__subtitle d-flex">
                                         <i class="ri-map-pin-fill fs-6"></i>
                                         <span class="ms-1 fw-semi-bold">2105 Badger Pond Lane, FL - USA</span>
                                     </p>
-                                    <a href="event-details.html" class="cover__title fs-6 mb-3">Varida Meronny music band</a>
+                                    <a href="event-details.html" class="mb-3 cover__title fs-6">Varida Meronny music band</a>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <!-- Start:: avatar group [[ Find at scss/components/avatar.scss ]] -->
@@ -259,12 +259,12 @@
                                 <a href="event-details.html" class="cover__image">
                                     <img src="images/background/horizontal/1.jpg" alt="Event cover">
                                 </a>
-                                <div class="cover__foot mt-3 px-2">
-                                    <p class="cover__subtitle d-flex mb-2">
+                                <div class="px-2 mt-3 cover__foot">
+                                    <p class="mb-2 cover__subtitle d-flex">
                                         <i class="ri-map-pin-fill fs-6"></i>
                                         <span class="ms-1 fw-semi-bold">2801 Pine Lake Rd, TX - USA</span>
                                     </p>
-                                    <a href="event-details.html" class="cover__title fs-6 mb-3">Music night virtual event to welcome new year</a>
+                                    <a href="event-details.html" class="mb-3 cover__title fs-6">Music night virtual event to welcome new year</a>
                                     <div class="d-flex align-items-center justify-content-between">
                                         <div class="d-flex align-items-center">
                                             <!-- Start:: avatar group [[ Find at scss/components/avatar.scss ]] -->
@@ -310,10 +310,6 @@
     <!-- Backdrop [[ Find at scss/framework/wrapper.scss ]] -->
     <div id="backdrop"></div>
 
-
-    <!-- Scripts -->
-    <script src="dist/js/plugins.bundle.js"></script>
-    <script src="dist/js/scripts.bundle.js"></script>
 
 </body>
 

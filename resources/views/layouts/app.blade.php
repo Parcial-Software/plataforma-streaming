@@ -31,7 +31,7 @@
     <link href="{{ asset('dist/css/plugins.bundle.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('dist/css/styles.bundle.css') }}" rel="stylesheet" type="text/css" />
 
-    <link href="{{ asset('dist/css/styles.bundle.css') }}" rel="stylesheet" type="text/css" />
+
 
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -54,5 +54,10 @@
     @livewireScripts
     <x-user.player></x-user.player>   
 </body>
+
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{{asset('dist/js/plugins.bundle.js')}}"></script>
+<script src="{{asset('dist/js/scripts.bundle.js')}}"></script>
 
 </html>

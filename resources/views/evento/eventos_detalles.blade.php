@@ -8,7 +8,7 @@
     <!-- Start:: loader [[ Find at scss/framework/loader.scss ]] -->
     <div id="loader">
         <div class="loader">
-            <div class="loader__eq mx-auto">
+            <div class="mx-auto loader__eq">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -16,7 +16,7 @@
                 <span></span>
                 <span></span>
             </div>
-            <span class="loader__text mt-2">Loading</span>
+            <span class="mt-2 loader__text">Loading</span>
         </div>
     </div>
     <!-- End:: loader -->
@@ -28,18 +28,18 @@
         <main id="page_content">
 
              <!-- Hero [[ Find at scss/framework/hero.scss ]] -->
-            <div class="hero" style="background-image: url(images/banner/event.jpg)"></div>
+            <div class="hero" style="background-image: url(images/banner/portada-5.png)"></div>
 
             <!-- Start:: under hero [[ Find at scss/framework/hero.scss ]] -->
-            <div class="under-hero container">
+            <div class="container under-hero">
 
                 <!-- Start:: section [[ Find at scss/framework/section.scss ]] -->
                 <div class="section">
                     <div class="row">
-                        <div class="col-xl-8 px-4 px-md-5 px-xl-0 mx-auto mb-5">
+                        <div class="px-4 mx-auto mb-5 col-xl-8 px-md-5 px-xl-0">
                             <h1>Varida Meronny music band</h1>
                             <!-- Start:: info list [[ Find at scss/components/list.scss ]] -->
-                            <ul class="info-list info-list--dotted mt-3">
+                            <ul class="mt-3 info-list info-list--dotted">
                                 <li>
                                     <div class="d-flex align-items-center">
                                         <!-- Start:: avatar group [[ Find at scss/components/avatar.scss ]] -->
@@ -68,14 +68,14 @@
                                 <li class="fw-semi-bold">Dec 14, 2022</li>
                             </ul>
                             <!-- End:: info list -->
-                            <a href="#" class="btn btn-primary mt-4" style="min-width: 140px;">
+                            <a href="#" class="mt-4 btn btn-primary" style="min-width: 140px;">
                                 <div class="btn__wrap">
                                     <i class="ri-add-circle-line"></i>
                                     <span>Join Event</span>
                                 </div>
                             </a>
                         </div>
-                        <div class="col-xl-10 mx-auto mb-5">
+                        <div class="mx-auto mb-5 col-xl-10">
                             <!-- Start:: cover [[ Find at scss/components/cover.scss ]] -->
                             <div class="cover cover--round">
                                 <div class="cover__image">
@@ -84,17 +84,17 @@
                             </div>
                             <!-- End:: cover -->
                         </div>
-                        <div class="col-xl-8 px-4 px-md-5 px-xl-0 mx-auto">
-                            <div class="row fs-6 mb-4">
-                                <div class="col-sm-6 d-flex mb-3">
+                        <div class="px-4 mx-auto col-xl-8 px-md-5 px-xl-0">
+                            <div class="mb-4 row fs-6">
+                                <div class="mb-3 col-sm-6 d-flex">
                                     <i class="ri-map-pin-2-fill fs-5"></i>
                                     <div class="ps-3">
-                                        <span class="d-block mb-2 fw-semi-bold text-dark">Venue At</span>
+                                        <span class="mb-2 d-block fw-semi-bold text-dark">Venue At</span>
                                         <p>2102 Tennessee Avenue, <br>Plymouth MI - 48170</p>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
-                                    <div class="d-flex align-items-center mb-3">
+                                    <div class="mb-3 d-flex align-items-center">
                                         <i class="ri-phone-fill fs-5"></i>
                                         <a href="tel:+0734-637-0374" class="ms-3 text-dark">0734-637-0374</a>
                                     </div>
@@ -121,11 +121,6 @@
 
     <!-- Backdrop [[ Find at scss/framework/wrapper.scss ]] -->
     <div id="backdrop"></div>
-
-
-    <!-- Scripts -->
-    <script src="dist/js/plugins.bundle.js"></script>
-    <script src="dist/js/scripts.bundle.js"></script>
 
 </body>
 

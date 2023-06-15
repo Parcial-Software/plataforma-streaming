@@ -7,7 +7,7 @@
         <!-- Start:: loader [[ Find at scss/framework/loader.scss ]] -->
         <div id="loader">
             <div class="loader">
-                <div class="loader__eq mx-auto">
+                <div class="mx-auto loader__eq">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -15,7 +15,7 @@
                     <span></span>
                     <span></span>
                 </div>
-                <span class="loader__text mt-2">Loading</span>
+                <span class="mt-2 loader__text">Loading</span>
             </div>
         </div>
         <!-- End:: loader -->
@@ -27,10 +27,10 @@
             <main id="page_content">
 
                 <!-- Hero [[ Find at scss/framework/hero.scss ]] -->
-                <div class="hero" style="background-image: url(images/banner/home.jpg);"></div>
+                <div class="hero" style="background-image: url(images/banner/portada.png);"></div>
 
                 <!-- Start:: under hero [[ Find at scss/framework/hero.scss ]] -->
-                <div class="under-hero container">
+                <div class="container under-hero">
 
                     <!-- Start:: section [[ Find at scss/framework/section.scss ]] -->
                     <div class="section">
@@ -334,12 +334,12 @@
                                                 <a href="event-details.html" class="cover__image">
                                                     <img src="images/background/horizontal/2.jpg" alt="Event cover">
                                                 </a>
-                                                <div class="cover__foot mt-3 px-2">
-                                                    <p class="cover__subtitle d-flex mb-2">
+                                                <div class="px-2 mt-3 cover__foot">
+                                                    <p class="mb-2 cover__subtitle d-flex">
                                                         <i class="ri-map-pin-fill fs-6"></i>
                                                         <span class="ms-1 fw-semi-bold">258 Goff Avenue, MI - USA</span>
                                                     </p>
-                                                    <a href="event-details.html" class="cover__title fs-6 mb-3">New year 1st night with BendiQ Band</a>
+                                                    <a href="event-details.html" class="mb-3 cover__title fs-6">New year 1st night with BendiQ Band</a>
                                                     <div class="d-flex align-items-center justify-content-between">
                                                         <div class="d-flex align-items-center">
                                                             <!-- Start:: avatar group [[ Find at scss/components/avatar.scss ]] -->
@@ -375,12 +375,12 @@
                                                 <a href="event-details.html" class="cover__image">
                                                     <img src="images/background/horizontal/3.jpg" alt="Event cover">
                                                 </a>
-                                                <div class="cover__foot mt-3 px-2">
-                                                    <p class="cover__subtitle d-flex mb-2">
+                                                <div class="px-2 mt-3 cover__foot">
+                                                    <p class="mb-2 cover__subtitle d-flex">
                                                         <i class="ri-map-pin-fill fs-6"></i>
                                                         <span class="ms-1 fw-semi-bold">2105 Badger Pond Lane, FL - USA</span>
                                                     </p>
-                                                    <a href="event-details.html" class="cover__title fs-6 mb-3">Varida Meronny music band</a>
+                                                    <a href="event-details.html" class="mb-3 cover__title fs-6">Varida Meronny music band</a>
                                                     <div class="d-flex align-items-center justify-content-between">
                                                         <div class="d-flex align-items-center">
                                                             <!-- Start:: avatar group [[ Find at scss/components/avatar.scss ]] -->
@@ -416,12 +416,12 @@
                                                 <a href="event-details.html" class="cover__image">
                                                     <img src="images/background/horizontal/1.jpg" alt="Event cover">
                                                 </a>
-                                                <div class="cover__foot mt-3 px-2">
-                                                    <p class="cover__subtitle d-flex mb-2">
+                                                <div class="px-2 mt-3 cover__foot">
+                                                    <p class="mb-2 cover__subtitle d-flex">
                                                         <i class="ri-map-pin-fill fs-6"></i>
                                                         <span class="ms-1 fw-semi-bold">2801 Pine Lake Rd, TX - USA</span>
                                                     </p>
-                                                    <a href="event-details.html" class="cover__title fs-6 mb-3">Music night virtual event to welcome new year</a>
+                                                    <a href="event-details.html" class="mb-3 cover__title fs-6">Music night virtual event to welcome new year</a>
                                                     <div class="d-flex align-items-center justify-content-between">
                                                         <div class="d-flex align-items-center">
                                                             <!-- Start:: avatar group [[ Find at scss/components/avatar.scss ]] -->
@@ -480,7 +480,7 @@
                                 </ul>
                             </div>
                             <!-- End:: mat tabs -->
-                            <div class="tab-content mt-4" id="songs_list_content">
+                            <div class="mt-4 tab-content" id="songs_list_content">
                                 <div class="tab-pane fade show active" id="recent_pane" role="tabpanel" aria-labelledby="recent" tabindex="0">
                                     <!-- Start:: list [[ Find at scss/components/list.scss ]] -->
                                     <div class="list">
@@ -1401,121 +1401,121 @@
                                 <div class="swiper-wrapper">
                                     <div class="swiper-slide">
                                         <!-- Start:: avatar [[ Find at scss/components/avatar.scss ]] -->
-                                        <div class="avatar avatar--xxl d-block text-center">
+                                        <div class="text-center avatar avatar--xxl d-block">
                                             <div class="avatar__image">
                                                 <a href="artist-details.html">
                                                     <img src="images/cover/large/1.jpg" alt="Arebica Luna">
                                                 </a>
                                             </div>
-                                            <a href="artist-details.html" class="avatar__title mt-3">Arebica Luna</a>
+                                            <a href="artist-details.html" class="mt-3 avatar__title">Arebica Luna</a>
                                         </div>
                                         <!-- End:: avatar -->
                                     </div>
                                     <div class="swiper-slide">
                                         <!-- Start:: avatar [[ Find at scss/components/avatar.scss ]] -->
-                                        <div class="avatar avatar--xxl d-block text-center">
+                                        <div class="text-center avatar avatar--xxl d-block">
                                             <div class="avatar__image">
                                                 <a href="artist-details.html">
                                                     <img src="images/cover/large/2.jpg" alt="Gerrina Linda">
                                                 </a>
                                             </div>
-                                            <a href="artist-details.html" class="avatar__title mt-3">Gerrina Linda</a>
+                                            <a href="artist-details.html" class="mt-3 avatar__title">Gerrina Linda</a>
                                         </div>
                                         <!-- End:: avatar -->
                                     </div>
                                     <div class="swiper-slide">
                                         <!-- Start:: avatar [[ Find at scss/components/avatar.scss ]] -->
-                                        <div class="avatar avatar--xxl d-block text-center">
+                                        <div class="text-center avatar avatar--xxl d-block">
                                             <div class="avatar__image">
                                                 <a href="artist-details.html">
                                                     <img src="images/cover/large/3.jpg" alt="Zunira Willy">
                                                 </a>
                                             </div>
-                                            <a href="artist-details.html" class="avatar__title mt-3">Zunira Willy</a>
+                                            <a href="artist-details.html" class="mt-3 avatar__title">Zunira Willy</a>
                                         </div>
                                         <!-- End:: avatar -->
                                     </div>
                                     <div class="swiper-slide">
                                         <!-- Start:: avatar [[ Find at scss/components/avatar.scss ]] -->
-                                        <div class="avatar avatar--xxl d-block text-center">
+                                        <div class="text-center avatar avatar--xxl d-block">
                                             <div class="avatar__image">
                                                 <a href="artist-details.html">
                                                     <img src="images/cover/large/4.jpg" alt="Johnny Marro">
                                                 </a>
                                             </div>
-                                            <a href="artist-details.html" class="avatar__title mt-3">Johnny Marro</a>
+                                            <a href="artist-details.html" class="mt-3 avatar__title">Johnny Marro</a>
                                         </div>
                                         <!-- End:: avatar -->
                                     </div>
                                     <div class="swiper-slide">
                                         <!-- Start:: avatar [[ Find at scss/components/avatar.scss ]] -->
-                                        <div class="avatar avatar--xxl d-block text-center">
+                                        <div class="text-center avatar avatar--xxl d-block">
                                             <div class="avatar__image">
                                                 <a href="artist-details.html">
                                                     <img src="images/cover/large/5.jpg" alt="Jina Moore">
                                                 </a>
                                             </div>
-                                            <a href="artist-details.html" class="avatar__title mt-3">Jina Moore</a>
+                                            <a href="artist-details.html" class="mt-3 avatar__title">Jina Moore</a>
                                         </div>
                                         <!-- End:: avatar -->
                                     </div>
                                     <div class="swiper-slide">
                                         <!-- Start:: avatar [[ Find at scss/components/avatar.scss ]] -->
-                                        <div class="avatar avatar--xxl d-block text-center">
+                                        <div class="text-center avatar avatar--xxl d-block">
                                             <div class="avatar__image">
                                                 <a href="artist-details.html">
                                                     <img src="images/cover/large/6.jpg" alt="Rasomi Pelina">
                                                 </a>
                                             </div>
-                                            <a href="artist-details.html" class="avatar__title mt-3">Rasomi Pelina</a>
+                                            <a href="artist-details.html" class="mt-3 avatar__title">Rasomi Pelina</a>
                                         </div>
                                         <!-- End:: avatar -->
                                     </div>
                                     <div class="swiper-slide">
                                         <!-- Start:: avatar [[ Find at scss/components/avatar.scss ]] -->
-                                        <div class="avatar avatar--xxl d-block text-center">
+                                        <div class="text-center avatar avatar--xxl d-block">
                                             <div class="avatar__image">
                                                 <a href="artist-details.html">
                                                     <img src="images/cover/large/7.jpg" alt="Pimila Holliwy">
                                                 </a>
                                             </div>
-                                            <a href="artist-details.html" class="avatar__title mt-3">Pimila Holliwy</a>
+                                            <a href="artist-details.html" class="mt-3 avatar__title">Pimila Holliwy</a>
                                         </div>
                                         <!-- End:: avatar -->
                                     </div>
                                     <div class="swiper-slide">
                                         <!-- Start:: avatar [[ Find at scss/components/avatar.scss ]] -->
-                                        <div class="avatar avatar--xxl d-block text-center">
+                                        <div class="text-center avatar avatar--xxl d-block">
                                             <div class="avatar__image">
                                                 <a href="artist-details.html">
                                                     <img src="images/cover/large/8.jpg" alt="Karen Jennings">
                                                 </a>
                                             </div>
-                                            <a href="artist-details.html" class="avatar__title mt-3">Karen Jennings</a>
+                                            <a href="artist-details.html" class="mt-3 avatar__title">Karen Jennings</a>
                                         </div>
                                         <!-- End:: avatar -->
                                     </div>
                                     <div class="swiper-slide">
                                         <!-- Start:: avatar [[ Find at scss/components/avatar.scss ]] -->
-                                        <div class="avatar avatar--xxl d-block text-center">
+                                        <div class="text-center avatar avatar--xxl d-block">
                                             <div class="avatar__image">
                                                 <a href="artist-details.html">
                                                     <img src="images/cover/large/9.jpg" alt="Lenisa Gory">
                                                 </a>
                                             </div>
-                                            <a href="artist-details.html" class="avatar__title mt-3">Lenisa Gory</a>
+                                            <a href="artist-details.html" class="mt-3 avatar__title">Lenisa Gory</a>
                                         </div>
                                         <!-- End:: avatar -->
                                     </div>
                                     <div class="swiper-slide">
                                         <!-- Start:: avatar [[ Find at scss/components/avatar.scss ]] -->
-                                        <div class="avatar avatar--xxl d-block text-center">
+                                        <div class="text-center avatar avatar--xxl d-block">
                                             <div class="avatar__image">
                                                 <a href="artist-details.html">
                                                     <img src="images/cover/large/10.jpg" alt="Nutty Nina">
                                                 </a>
                                             </div>
-                                            <a href="artist-details.html" class="avatar__title mt-3">Nutty Nina</a>
+                                            <a href="artist-details.html" class="mt-3 avatar__title">Nutty Nina</a>
                                         </div>
                                         <!-- End:: avatar -->
                                     </div>
@@ -1936,7 +1936,7 @@
                                                     <img src="images/background/horizontal/1.jpg" alt="DJ Remix">
                                                 </a>
                                                 <div class="cover__image__content">
-                                                    <a href="album-details.html" class="cover__title mb-1 fs-6 text-truncate">DJ Remix</a>
+                                                    <a href="album-details.html" class="mb-1 cover__title fs-6 text-truncate">DJ Remix</a>
                                                     <span class="cover__subtitle">10 Songs | 10 Favorites</span>
                                                 </div>
                                             </div>
@@ -1951,7 +1951,7 @@
                                                     <img src="images/background/horizontal/2.jpg" alt="Rock Band">
                                                 </a>
                                                 <div class="cover__image__content">
-                                                    <a href="album-details.html" class="cover__title mb-1 fs-6 text-truncate">Rock Band</a>
+                                                    <a href="album-details.html" class="mb-1 cover__title fs-6 text-truncate">Rock Band</a>
                                                     <span class="cover__subtitle">14 Songs | 12 Favorites</span>
                                                 </div>
                                             </div>
@@ -1966,7 +1966,7 @@
                                                     <img src="images/background/horizontal/3.jpg" alt="Solo Special">
                                                 </a>
                                                 <div class="cover__image__content">
-                                                    <a href="album-details.html" class="cover__title mb-1 fs-6 text-truncate">Solo Special</a>
+                                                    <a href="album-details.html" class="mb-1 cover__title fs-6 text-truncate">Solo Special</a>
                                                     <span class="cover__subtitle">21 Songs | 45 Favorites</span>
                                                 </div>
                                             </div>
@@ -1981,7 +1981,7 @@
                                                     <img src="images/background/horizontal/4.jpg" alt="Romantic">
                                                 </a>
                                                 <div class="cover__image__content">
-                                                    <a href="album-details.html" class="cover__title mb-1 fs-6 text-truncate">Romantic</a>
+                                                    <a href="album-details.html" class="mb-1 cover__title fs-6 text-truncate">Romantic</a>
                                                     <span class="cover__subtitle">12 Songs | 75 Favorites</span>
                                                 </div>
                                             </div>
@@ -1996,7 +1996,7 @@
                                                     <img src="images/background/horizontal/5.jpg" alt="GYM">
                                                 </a>
                                                 <div class="cover__image__content">
-                                                    <a href="album-details.html" class="cover__title mb-1 fs-6 text-truncate">GYM</a>
+                                                    <a href="album-details.html" class="mb-1 cover__title fs-6 text-truncate">GYM</a>
                                                     <span class="cover__subtitle">16 Songs | 32 Favorites</span>
                                                 </div>
                                             </div>
@@ -2011,7 +2011,7 @@
                                                     <img src="images/background/horizontal/6.jpg" alt="Retro Special">
                                                 </a>
                                                 <div class="cover__image__content">
-                                                    <a href="album-details.html" class="cover__title mb-1 fs-6 text-truncate">Retro Special</a>
+                                                    <a href="album-details.html" class="mb-1 cover__title fs-6 text-truncate">Retro Special</a>
                                                     <span class="cover__subtitle">34 Songs | 69 Favorites</span>
                                                 </div>
                                             </div>
@@ -2295,10 +2295,7 @@
         <div id="backdrop"></div>
 
 
-        <!-- Scripts -->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script src="{{ asset('dist/js/plugins.bundle.js') }}"></script>
-        <script src="{{ asset('dist/js/scripts.bundle.js') }}"></script>
+
 
     </body>
 </x-app-layout>

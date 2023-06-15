@@ -15,7 +15,7 @@
       </div>
 
       <div class="sidebar-body" data-scroll="true">
-          <nav class="navbar d-block p-0">
+          <nav class="p-0 navbar d-block">
               <ul class="navbar-nav">
                   <li class="nav-item">
                       <a href="{{ route('dashboard.home') }}" class="nav-link d-flex align-items-center">
@@ -24,19 +24,19 @@
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a href="{{ route('dashboard.generos') }}" class="nav-link d-flex align-items-center">
+                      <a href="{{ route('generos.index') }}" class="nav-link d-flex align-items-center">
                           <i class="ri-disc-line fs-5"></i>
                           <span class="ps-3">Genres</span>
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a href="{{ route('dashboard.music') }}" class="nav-link d-flex align-items-center">
+                      <a href="{{ route('musica.music') }}" class="nav-link d-flex align-items-center">
                           <i class="ri-music-2-line fs-5"></i>
                           <span class="ps-3">Free Music</span>
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a href="albums.html" class="nav-link d-flex align-items-center">
+                      <a href="{{route('album.albums')}}" class="nav-link d-flex align-items-center">
                           <i class="ri-album-line fs-5"></i>
                           <span class="ps-3">Albums</span>
                       </a>
@@ -64,7 +64,7 @@
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a href="{{ route('dashboard.favoritos') }}" class="nav-link d-flex align-items-center">
+                      <a href="{{ route('favorito.favoritos') }}" class="nav-link d-flex align-items-center">
                           <i class="ri-heart-line fs-5"></i>
                           <span class="ps-3">Favorites</span>
                       </a>
@@ -80,48 +80,33 @@
                       <span class="nav-item--head__dots">...</span>
                   </li>
                   <li class="nav-item">
-                      <a href="{{ route('dashboard.eventos') }}" class="nav-link d-flex align-items-center">
+                      <a href="{{ route('evento.eventos') }}" class="nav-link d-flex align-items-center">
                           <i class="ri-calendar-event-line fs-5"></i>
                           <span class="ps-3">Events</span>
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a href="{{ route('dashboard.eventos_detalles') }}" class="nav-link d-flex align-items-center">
+                      <a href="{{ route('evento.eventos_detalles') }}" class="nav-link d-flex align-items-center">
                           <i class="ri-newspaper-line fs-5"></i>
                           <span class="ps-3">Event Details</span>
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a href="{{ route('dashboard.crear_evento') }}" class="nav-link d-flex align-items-center">
+                      <a href="{{ route('evento.crear_evento') }}" class="nav-link d-flex align-items-center">
                           <i class="ri-add-circle-line fs-5"></i>
                           <span class="ps-3">Add Event</span>
                       </a>
                   </li>
-                  <li class="nav-item nav-item--head">
-                      <span class="nav-item--head__text">Extra</span>
-                      <span class="nav-item--head__dots">...</span>
-                  </li>
-                  <li class="nav-item">
-                      <a href="404.html" class="nav-link d-flex align-items-center external">
-                          <i class="ri-error-warning-line fs-5"></i>
-                          <span class="ps-3">404 Page</span>
-                      </a>
-                  </li>
-                  <li class="nav-item">
-                      <a href="blank.html" class="nav-link d-flex align-items-center">
-                          <i class="ri-file-line fs-5"></i>
-                          <span class="ps-3">Blank Template</span>
-                      </a>
-                  </li>
+                  
               </ul>
           </nav>
       </div>
 
       <div class="sidebar-foot">
-          <a href="{{ route('dashboard.añadir_musica') }}" class="btn btn-primary d-flex">
+          <a href="{{ route('musica.añadir_musica') }}" class="btn btn-primary d-flex">
               <div class="btn__wrap">
                   <i class="ri-music-fill"></i>
-                  <span>Add Music</span>
+                  <span>Añadir Musica</span>
               </div>
           </a>
       </div>
