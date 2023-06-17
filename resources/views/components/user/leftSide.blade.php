@@ -18,7 +18,7 @@
           <nav class="p-0 navbar d-block">
               <ul class="navbar-nav">
                   <li class="nav-item">
-                      <a href="{{ route('dashboard.home') }}" class="nav-link d-flex align-items-center">
+                      <a href="{{ route('dashboard') }}" class="nav-link d-flex align-items-center">
                           <i class="ri-home-4-line fs-5"></i>
                           <span class="ps-3">Home</span>
                       </a>
@@ -42,15 +42,9 @@
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a href="artists.html" class="nav-link d-flex align-items-center">
+                      <a href="{{ route('artists.artists') }}" class="nav-link d-flex align-items-center">
                           <i class="ri-mic-line fs-5"></i>
                           <span class="ps-3">Artists</span>
-                      </a>
-                  </li>
-                  <li class="nav-item">
-                      <a href="stations.html" class="nav-link d-flex align-items-center">
-                          <i class="ri-radio-2-line fs-5"></i>
-                          <span class="ps-3">Stations</span>
                       </a>
                   </li>
                   <li class="nav-item nav-item--head">
@@ -70,38 +64,14 @@
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a href="history.html" class="nav-link d-flex align-items-center">
+                      <a href="{{ route('history.history') }}" class="nav-link d-flex align-items-center">
                           <i class="ri-history-line fs-5"></i>
                           <span class="ps-3">History</span>
                       </a>
                   </li>
-                  <li class="nav-item nav-item--head">
-                      <span class="nav-item--head__text">Events</span>
-                      <span class="nav-item--head__dots">...</span>
-                  </li>
-                  <li class="nav-item">
-                      <a href="{{ route('evento.eventos') }}" class="nav-link d-flex align-items-center">
-                          <i class="ri-calendar-event-line fs-5"></i>
-                          <span class="ps-3">Events</span>
-                      </a>
-                  </li>
-                  <li class="nav-item">
-                      <a href="{{ route('evento.eventos_detalles') }}" class="nav-link d-flex align-items-center">
-                          <i class="ri-newspaper-line fs-5"></i>
-                          <span class="ps-3">Event Details</span>
-                      </a>
-                  </li>
-                  <li class="nav-item">
-                      <a href="{{ route('evento.crear_evento') }}" class="nav-link d-flex align-items-center">
-                          <i class="ri-add-circle-line fs-5"></i>
-                          <span class="ps-3">Add Event</span>
-                      </a>
-                  </li>
-                  
               </ul>
           </nav>
       </div>
-
       <div class="sidebar-foot">
           <a href="{{ route('musica.añadir_musica') }}" class="btn btn-primary d-flex">
               <div class="btn__wrap">

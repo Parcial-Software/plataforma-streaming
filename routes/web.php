@@ -19,10 +19,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('dashboard.home');
-})->name('dashboard.home');
-
 Route::get('/music', function () {
     return view('musica.music');
 })->name('musica.music');
@@ -61,6 +57,14 @@ Route::get('/albums', function(){
     return view('album.albums');
 })->name('album.albums');
 
+Route::get('/artists', function(){
+    return view('artists.artists');
+})->name('artists.artists');
+
+Route::get('/history', function(){
+    return view('history.history');
+})->name('history.history');
+
 
 Route::middleware([
     'auth:sanctum',
@@ -68,6 +72,6 @@ Route::middleware([
     'verified'
 ])->group(function () {
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return view('dashboard.home');
     })->name('dashboard');
 });
