@@ -6,7 +6,8 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <meta name="description" content="Listen App - Online Music Streaming App Template">
-    <meta name="keywords" content="music template, music app, music web app, responsive music app, music, themeforest, html music app template, css3, html5">
+    <meta name="keywords"
+        content="music template, music app, music web app, responsive music app, music, themeforest, html music app template, css3, html5">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
@@ -36,13 +37,11 @@
     <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <!-- Scripts -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
     <x-user.header></x-user.header>
 </head>
 
@@ -52,12 +51,12 @@
     {{ $slot }}
 
     @livewireScripts
-    <x-user.player></x-user.player>   
+    <x-user.player></x-user.player>
 </body>
 
 <!-- Scripts -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="{{asset('dist/js/plugins.bundle.js')}}"></script>
-<script src="{{asset('dist/js/scripts.bundle.js')}}"></script>
+<script src="{{ asset('dist/js/plugins.bundle.js') }}"></script>
+<script src="{{ asset('dist/js/scripts.bundle.js') }}"></script>
 
 </html>

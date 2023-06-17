@@ -33,7 +33,7 @@
                                 <div class="card-body p-sm-5">
                                     <h4>Iniciar sesión en <span class="text-primary">SoundStream</span></h4>
                                     <p class="fs-6">¡Bienvenido de nuevo! Inicia sesión con tus datos que ingresaste durante el registro</p>
-                                    <form action="{{ route('login') }}" method="POST" class="mt-5">
+                                    <form action=" {{ route('loginApi')}} " method="POST" class="mt-5">
                                     @csrf
                                         <div class="mb-3">
                                             <label for="email" class="form-label fw-medium">Correo</label>
@@ -47,7 +47,7 @@
                                             <a href="#" class="link-primary fw-medium">¿Olvidaste tu contraseña?</a>
                                         </div>
                                         <div class="mb-5">
-                                            <input type="submit" class="btn btn-primary w-100" value="Iniciar Sesión">
+                                            <button class="btn btn-primary w-100" type="submit">Iniciar Sesion</button>
                                         </div>
                                         <p>¿Todavía no estás registrado? <br><a href="register.html" class="fw-medium external">Registrarse</a></p>
                                     </form>

@@ -17,7 +17,7 @@
                  <!-- End:: search form -->
 
                  <!-- Start:: search [[ Find at scss/framework/search.scss ]] -->
-                 <div id="search_results" class="search pb-3">
+                 <div id="search_results" class="pb-3 search">
                      <div class="search__head">
                          <div class="search__head__filter">
                              <button type="button" class="btn btn-sm btn-light-primary active">Trending</button>
@@ -28,7 +28,7 @@
                      </div>
                      <div class="search__body" data-scroll="true">
                          <div class="mb-4">
-                             <div class="d-flex align-items-center justify-content-between mb-3">
+                             <div class="mb-3 d-flex align-items-center justify-content-between">
                                  <span class="search__title">Artists</span>
                                  <a href="artists.html" class="btn btn-link">View All</a>
                              </div>
@@ -76,7 +76,7 @@
                              </div>
                          </div>
                          <div class="mb-4">
-                             <div class="d-flex align-items-center justify-content-between mb-3">
+                             <div class="mb-3 d-flex align-items-center justify-content-between">
                                  <span class="search__title">Songs</span>
                                  <a href="songs.html" class="btn btn-link">View All</a>
                              </div>
@@ -136,7 +136,7 @@
                              </div>
                          </div>
                          <div>
-                             <div class="d-flex align-items-center justify-content-between mb-3">
+                             <div class="mb-3 d-flex align-items-center justify-content-between">
                                  <span class="search__title">Albums</span>
                                  <a href="albums.html" class="btn btn-link">View All</a>
                              </div>
@@ -206,111 +206,111 @@
                              <span class="d-none d-md-block ms-1">Language</span>
                          </a>
                          <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end" aria-labelledby="language_menu">
-                             <div class="py-2 px-4">
+                             <div class="px-4 py-2">
                                  <span class="d-block fw-bold">What music do you like?</span>
                                  <p>Select languages you want to listen.</p>
                              </div>
                              <div class="dropdown-divider"></div>
-                             <div class="d-flex flex-wrap py-2">
-                                 <div class="py-2 px-4 w-50">
-                                     <div class="form-check mb-0">
+                             <div class="flex-wrap py-2 d-flex">
+                                 <div class="px-4 py-2 w-50">
+                                     <div class="mb-0 form-check">
                                          <input class="form-check-input" type="checkbox" id="lang_1">
                                          <label class="form-check-label fw-semi-bold" for="lang_1">Hindi</label>
                                      </div>
                                  </div>
-                                 <div class="py-2 px-4 w-50">
-                                     <div class="form-check mb-0">
+                                 <div class="px-4 py-2 w-50">
+                                     <div class="mb-0 form-check">
                                          <input class="form-check-input" type="checkbox" id="lang_2">
                                          <label class="form-check-label fw-semi-bold" for="lang_2">Punjabi</label>
                                      </div>
                                  </div>
-                                 <div class="py-2 px-4 w-50">
-                                     <div class="form-check mb-0">
+                                 <div class="px-4 py-2 w-50">
+                                     <div class="mb-0 form-check">
                                          <input class="form-check-input" type="checkbox" id="lang_3">
                                          <label class="form-check-label fw-semi-bold" for="lang_3">Tamil</label>
                                      </div>
                                  </div>
-                                 <div class="py-2 px-4 w-50">
-                                     <div class="form-check mb-0">
+                                 <div class="px-4 py-2 w-50">
+                                     <div class="mb-0 form-check">
                                          <input class="form-check-input" type="checkbox" id="lang_4">
                                          <label class="form-check-label fw-semi-bold" for="lang_4">Bengali</label>
                                      </div>
                                  </div>
-                                 <div class="py-2 px-4 w-50">
-                                     <div class="form-check mb-0">
+                                 <div class="px-4 py-2 w-50">
+                                     <div class="mb-0 form-check">
                                          <input class="form-check-input" type="checkbox" id="lang_5">
                                          <label class="form-check-label fw-semi-bold" for="lang_5">Kannada</label>
                                      </div>
                                  </div>
-                                 <div class="py-2 px-4 w-50">
-                                     <div class="form-check mb-0">
+                                 <div class="px-4 py-2 w-50">
+                                     <div class="mb-0 form-check">
                                          <input class="form-check-input" type="checkbox" id="lang_6">
                                          <label class="form-check-label fw-semi-bold" for="lang_6">Gujarati</label>
                                      </div>
                                  </div>
-                                 <div class="py-2 px-4 w-50">
-                                     <div class="form-check mb-0">
+                                 <div class="px-4 py-2 w-50">
+                                     <div class="mb-0 form-check">
                                          <input class="form-check-input" type="checkbox" id="lang_7">
                                          <label class="form-check-label fw-semi-bold" for="lang_7">Urdu</label>
                                      </div>
                                  </div>
-                                 <div class="py-2 px-4 w-50">
-                                     <div class="form-check mb-0">
+                                 <div class="px-4 py-2 w-50">
+                                     <div class="mb-0 form-check">
                                          <input class="form-check-input" type="checkbox" id="lang_8">
                                          <label class="form-check-label fw-semi-bold" for="lang_8">English</label>
                                      </div>
                                  </div>
-                                 <div class="py-2 px-4 w-50">
-                                     <div class="form-check mb-0">
+                                 <div class="px-4 py-2 w-50">
+                                     <div class="mb-0 form-check">
                                          <input class="form-check-input" type="checkbox" id="lang_9">
                                          <label class="form-check-label fw-semi-bold" for="lang_9">Telugu</label>
                                      </div>
                                  </div>
-                                 <div class="py-2 px-4 w-50">
-                                     <div class="form-check mb-0">
+                                 <div class="px-4 py-2 w-50">
+                                     <div class="mb-0 form-check">
                                          <input class="form-check-input" type="checkbox" id="lang_10">
                                          <label class="form-check-label fw-semi-bold" for="lang_10">Bhojpuri</label>
                                      </div>
                                  </div>
-                                 <div class="py-2 px-4 w-50">
-                                     <div class="form-check mb-0">
+                                 <div class="px-4 py-2 w-50">
+                                     <div class="mb-0 form-check">
                                          <input class="form-check-input" type="checkbox" id="lang_11">
                                          <label class="form-check-label fw-semi-bold" for="lang_11">Malayalam</label>
                                      </div>
                                  </div>
-                                 <div class="py-2 px-4 w-50">
-                                     <div class="form-check mb-0">
+                                 <div class="px-4 py-2 w-50">
+                                     <div class="mb-0 form-check">
                                          <input class="form-check-input" type="checkbox" id="lang_12">
                                          <label class="form-check-label fw-semi-bold" for="lang_12">Marathi</label>
                                      </div>
                                  </div>
-                                 <div class="py-2 px-4 w-50">
-                                     <div class="form-check mb-0">
+                                 <div class="px-4 py-2 w-50">
+                                     <div class="mb-0 form-check">
                                          <input class="form-check-input" type="checkbox" id="lang_13">
                                          <label class="form-check-label fw-semi-bold" for="lang_13">Haryanvi</label>
                                      </div>
                                  </div>
-                                 <div class="py-2 px-4 w-50">
-                                     <div class="form-check mb-0">
+                                 <div class="px-4 py-2 w-50">
+                                     <div class="mb-0 form-check">
                                          <input class="form-check-input" type="checkbox" id="lang_14">
                                          <label class="form-check-label fw-semi-bold" for="lang_14">Rajasthani</label>
                                      </div>
                                  </div>
-                                 <div class="py-2 px-4 w-50">
-                                     <div class="form-check mb-0">
+                                 <div class="px-4 py-2 w-50">
+                                     <div class="mb-0 form-check">
                                          <input class="form-check-input" type="checkbox" id="lang_15">
                                          <label class="form-check-label fw-semi-bold" for="lang_15">Assamese</label>
                                      </div>
                                  </div>
-                                 <div class="py-2 px-4 w-50">
-                                     <div class="form-check mb-0">
+                                 <div class="px-4 py-2 w-50">
+                                     <div class="mb-0 form-check">
                                          <input class="form-check-input" type="checkbox" id="lang_16">
                                          <label class="form-check-label fw-semi-bold" for="lang_16">Odia</label>
                                      </div>
                                  </div>
                              </div>
                              <div class="dropdown-divider"></div>
-                             <div class="py-2 px-4">
+                             <div class="px-4 py-2">
                                  <button type="button" class="btn btn-primary w-100 justify-content-center">Update</button>
                              </div>
                          </div>
@@ -319,19 +319,19 @@
                      <div class="dropdown ms-3 ms-sm-4">
                          <a href="javascript:void(0);" class="avatar header-text" role="button" id="user_menu" data-bs-toggle="dropdown" aria-expanded="false">
                              <div class="avatar__image">
-                                 <img src="images/users/thumb.jpg" alt="user">
+                                 <img src="{{asset('images/users/perfil-del-usuario.png')}}" alt="user">
                              </div>
-                             <span class="ps-2 d-none d-sm-block">{{auth()->user()->name}}</span>
+                             <span class="ps-2 d-none d-sm-block">{{ session('name')}}</span>
                          </a>
                          <ul class="dropdown-menu dropdown-menu-md dropdown-menu-end" aria-labelledby="user_menu">
                              <li>
-                                 <div class="py-2 px-3 avatar avatar--lg">
+                                 <div class="px-3 py-2 avatar avatar--lg">
                                      <div class="avatar__image">
-                                         <img src="images/users/thumb.jpg" alt="user">
+                                         <img src="{{asset('images/users/perfil-del-usuario.png')}}" alt="user">
                                      </div>
                                      <div class="avatar__content">
-                                         <span class="avatar__title">{{auth()->user()->name}}</span>
-                                         <span class="avatar__subtitle">Artist</span>
+                                         <span class="avatar__title"></span>
+                                         <span class="avatar__subtitle">{{ session('name')}}</span>
                                      </div>
                                  </div>
                              </li>

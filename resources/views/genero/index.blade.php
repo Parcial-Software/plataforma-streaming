@@ -39,17 +39,17 @@
                             <h3 class="mb-0">Géneros <span class="text-primary">Musicales</span></h3>
                         </div>
                         <div class="row g-4">
-                            @foreach ($generos as $genero)
+                            @foreach ($genders as $gender)
                                 <div class="col-xl-3 col-sm-6">
                                     <!-- Start:: cover -->
                                     <div class="cover cover--round">
-                                        <a href="#" class="cover__image">
+                                        <a href="{{route('gender.show', $gender['id'])}}" class="cover__image">
                                             <div class="image-container">
-                                                <img src="{{ asset($genero->imagen) }}" alt="{{ $genero->nombre }}">
+                                                <img src="{{ $gender['imageUrl'] }}" alt="">
                                             </div>
                                             <div class="cover__image__content">
                                                 <span
-                                                    class="mb-1 cover__title fs-6 text-truncate">{{ $genero->nombre }}</span>
+                                                    class="mb-1 cover__title fs-6 text-truncate">{{ $gender['name'] }}</span>
                                             </div>
                                         </a>
                                     </div>

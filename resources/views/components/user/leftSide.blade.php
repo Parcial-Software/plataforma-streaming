@@ -2,7 +2,7 @@
   <aside id="sidebar">
       <div class="sidebar-head d-flex align-items-center justify-content-between">
           <a href="index.html" class="brand external">
-              <img src="images/logos/logo.svg" alt="Listen app">
+              <img src="{{asset('dist/images/logos/logo.svg')}}" alt="Listen app">
           </a>
 
           <a href="javascript:void(0);" role="button" class="sidebar-toggler" aria-label="Sidebar toggler">
@@ -24,7 +24,7 @@
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a href="{{ route('generos.index') }}" class="nav-link d-flex align-items-center">
+                      <a href="{{ route('gender.index') }}" class="nav-link d-flex align-items-center">
                           <i class="ri-disc-line fs-5"></i>
                           <span class="ps-3">Genres</span>
                       </a>

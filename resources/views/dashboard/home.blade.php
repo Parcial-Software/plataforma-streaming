@@ -2294,8 +2294,5 @@
         <!-- Backdrop [[ Find at scss/framework/wrapper.scss ]] -->
         <div id="backdrop"></div>
 
-
-
-
     </body>
 </x-app-layout>

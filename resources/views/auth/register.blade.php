@@ -34,7 +34,7 @@
                                 <h4>Regístrate en <span class="text-primary">SoundStream</span></h4>
                                 <p class="fs-6">Es hora de unirte a SoundStream y disfrutar de una experiencia musical
                                     increíble.</p>
-                                <form action="{{ route('register') }}" method="POST" class="mt-5">
+                                <form action="{{ route('registerApi') }}" method="POST" class="mt-5">
                                 @csrf
                                 <div class="mb-3">
                                         <label for="name" class="form-label fw-medium">Nombre</label>
@@ -61,7 +61,7 @@
                                         </div>
                                     </div>
                                     <div class="mb-5">
-                                        <input type="submit" class="btn btn-primary w-100" value="Registrarme">
+                                        <button type="submit" class="btn btn-primary w-100">Registrar</button>
                                     </div>
                                     <p>¿Ya tienes una cuenta? <br><a href="login.html"
                                             class="fw-medium external">Iniciar Sesión</a></p>
