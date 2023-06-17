@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\GenderController;
 use App\Http\Controllers\GeneroController;
 use App\Models\Genero;
 use Illuminate\Support\Facades\Route;
@@ -19,11 +21,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::post('/login', [AuthController::class, 'login'])->name('loginApi');
+Route::post('/register', [AuthController::class, 'register'])->name('registerApi');
+Route::get('/genders', [GenderController::class, 'index'])->name('gender.index');
+Route::get('/gender/{id}', [GenderController::class, 'show'])->name('gender.show');
+
+Route::get('/dashboard', function () {
+    return view('dashboard.home');
+})->name('dashboard');
 Route::get('/music', function () {
     return view('musica.music');
 })->name('musica.music');
-
-Route::resource('generos', GeneroController::class);
 
 Route::get('/generos_detalles', function () {
     return view('genero.generos_detalles');
@@ -53,25 +61,16 @@ Route::get('/añadir_musica', function () {
     return view('musica.añadir_musica');
 })->name('musica.añadir_musica');
 
-Route::get('/albums', function(){
+Route::get('/albums', function () {
     return view('album.albums');
 })->name('album.albums');
 
-Route::get('/artists', function(){
+Route::get('/artists', function () {
     return view('artists.artists');
 })->name('artists.artists');
 
-Route::get('/history', function(){
+Route::get('/history', function () {
     return view('history.history');
 })->name('history.history');
 
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard.home');
-    })->name('dashboard');
-});

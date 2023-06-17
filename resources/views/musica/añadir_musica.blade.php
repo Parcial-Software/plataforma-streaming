@@ -43,11 +43,12 @@
                                     <div class="mat-tabs">
                                         <ul class="nav nav-tabs" id="add_music" role="tablist">
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link active" id="music" data-bs-toggle="tab" data-bs-target="#music_pane" type="button" role="tab" aria-controls="music_pane" aria-selected="true">Add Music</button>
+                                                <button class="nav-link" id="album" data-bs-toggle="tab" data-bs-target="#album_pane" type="button" role="tab" aria-controls="album_pane" aria-selected="false">Añadir Album</button>
                                             </li>
                                             <li class="nav-item" role="presentation">
-                                                <button class="nav-link" id="album" data-bs-toggle="tab" data-bs-target="#album_pane" type="button" role="tab" aria-controls="album_pane" aria-selected="false">Add Album</button>
+                                                <button class="nav-link active" id="music" data-bs-toggle="tab" data-bs-target="#music_pane" type="button" role="tab" aria-controls="music_pane" aria-selected="true">Añadir Musica</button>
                                             </li>
+                                            
                                         </ul>
                                     </div>
                                     <!-- End:: mat tabs -->
@@ -181,14 +182,7 @@
                                                     </div>
                                                     <div class="form-text">Please add ticket price if Event is paid</div>
                                                 </div>
-                                                <div class="col-12">
-                                                    <a href="javascript:void(0);" class="btn btn-sm btn-light-primary">
-                                                        <div class="btn__wrap">
-                                                            <i class="ri-add-line"></i>
-                                                            <span>Add New</span>
-                                                        </div>
-                                                    </a>
-                                                </div>
+                                                
                                             </form>
                                         </div>
                                     </div>
