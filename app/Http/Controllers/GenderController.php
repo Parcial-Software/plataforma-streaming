@@ -20,4 +20,6 @@ class GenderController extends Controller
         $songs = Http::get($apiUrl . 'songs/gender/' . $genderId)->json();
         return view('genero.show', compact('songs'));
     }
+    
+    
 }

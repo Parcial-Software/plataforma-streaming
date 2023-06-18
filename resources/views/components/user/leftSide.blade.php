@@ -73,7 +73,7 @@
           </nav>
       </div>
       <div class="sidebar-foot">
-          <a href="{{ route('musica.añadir_musica') }}" class="btn btn-primary d-flex">
+          <a href="{{ route('song.index') }}" class="btn btn-primary d-flex">
               <div class="btn__wrap">
                   <i class="ri-music-fill"></i>
                   <span>Añadir Musica</span>

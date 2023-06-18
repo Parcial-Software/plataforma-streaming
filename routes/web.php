@@ -1,8 +1,10 @@
 <?php
 
+use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GenderController;
 use App\Http\Controllers\GeneroController;
+use App\Http\Controllers\SongController;
 use App\Models\Genero;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +27,10 @@ Route::post('/login', [AuthController::class, 'login'])->name('loginApi');
 Route::post('/register', [AuthController::class, 'register'])->name('registerApi');
 Route::get('/genders', [GenderController::class, 'index'])->name('gender.index');
 Route::get('/gender/{id}', [GenderController::class, 'show'])->name('gender.show');
+Route::post('/album', [AlbumController::class, 'store'])->name('album.store');
+Route::get('/song', [SongController::class, 'index'])->name('song.index');
+Route::post('/song', [SongController::class, 'store'])->name('song.store');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard.home');
