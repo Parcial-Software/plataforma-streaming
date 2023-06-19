@@ -12,10 +12,21 @@ class SongController extends Controller
     public function index()
     {
         $apiUrl = config('apiUrl');
-        $genders = Http::get($apiUrl . 'genders' )->json();
+        $response = Http::get($apiUrl . 'genders');
+        $genders = $response->json();
 
-        $albums = Http::get($apiUrl . 'albums/user/'. session('id')  )->json();
-        return view('musica.añadir_musica', compact('genders', 'albums'));
+        $response = Http::get($apiUrl . 'albums/user/'. session('id') );
+        $albums = $response->json();
+        return view('musica.añadir_musica', compact('genders', 'albums', 'songs'));
+    }
+
+    public function index2()
+    {
+        $apiUrl = config('apiUrl');
+        $response = Http::get($apiUrl . 'songs/user/'. session('id') );
+        $songs = $response->json();
+        return view('musica.index', compact('songs') );
+
     }
 
     public function store(Request $request)
