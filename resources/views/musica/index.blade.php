@@ -28,16 +28,25 @@
             <main id="page_content">
 
                 <!-- Hero [[ Find at scss/framework/hero.scss ]] -->
-                <div class="hero" style="background-image: url(images/banner/portada-4.png);"></div>
+                <div class="hero" style="background-image: url(images/banner/portada-1.png);"></div>
 
                 <!-- Start:: under hero [[ Find at scss/framework/hero.scss ]] -->
                 <div class="container under-hero">
 
                     <!-- Start:: section [[ Find at scss/framework/section.scss ]] -->
                     <div class="section">
-                        <div class="section__head">
-                            <h3 class="mb-0">Canciones</h3>
+                        <div class="section__head align-items-center">
+                            <span class="d-block pe-3 fs-6 fw-semi-bold">5240 Songs in the list</span>
+                            <div>
+                                <select class="form-select" aria-label="Filter song">
+                                    <option value="Popular">Popular</option>
+                                    <option value="Most played">Most played</option>
+                                    <option value="A to Z">A to Z</option>
+                                    <option value="Z to A">Z to A</option>
+                                </select>
+                            </div>
                         </div>
+
                         <!-- Start:: list [[ Find at scss/components/list.scss ]] -->
                         <div class="list">
                             @foreach ($songs as $song)
@@ -46,7 +55,7 @@
                                         <div class="list__item" data-song-id="{{ $song['id'] }}"
                                             data-song-name="{{ $song['name'] }}"
                                             data-song-artist="{{ $song['artist'] }}"
-                                            data-song-album="{{ $song['album'] }}"
+                                            data-song-album="{{ $song['albumId'] }}"
                                             data-song-url="{{ $song['fileUrl'] }}"
                                             data-song-cover="{{ $song['imageUrl'] }}">
 
@@ -102,14 +111,20 @@
                                 </div>
                             @endforeach
                         </div>
-
                         <!-- End:: list -->
 
-                        <!-- End:: section -->
-
-
+                        <div class="mt-5 text-center">
+                            <a href="javascript:void(0);" class="btn btn-primary">
+                                <div class="btn__wrap">
+                                    <i class="ri-loader-3-fill"></i>
+                                    <span>Load more</span>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                    <!-- End:: under hero -->
+                    <!-- End:: section -->
+             </div>
+                <!-- End:: under hero -->
 
             </main>
             <!-- End:: page content -->
@@ -122,4 +137,5 @@
 
 
     </body>
+
 </x-app-layout>

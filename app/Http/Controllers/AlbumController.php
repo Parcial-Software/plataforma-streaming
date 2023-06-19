@@ -9,6 +9,22 @@ use Illuminate\Support\Facades\Validator;
 
 class AlbumController extends Controller
 {
+    public function index()
+    {
+        $apiUrl = config('apiUrl');
+        $response = Http::get($apiUrl . 'Albums');
+        $albums = $response->json();
+
+        $response = Http::get($apiUrl . 'Albums/user/'. session('id'));
+        $userAlbums = $response->json();
+
+        $response = Http::get($apiUrl . 'Songs');
+        $songs = $response->json();
+    
+
+        return view('album.index', compact('albums', 'userAlbums', 'songs'));
+    }
+
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [

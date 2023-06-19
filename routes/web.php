@@ -37,6 +37,8 @@ Route::get('/song', [SongController::class, 'index'])->name('song.index');
 Route::post('/song', [SongController::class, 'store'])->name('song.store');
 Route::get('/plans', [PlanController::class, 'index'])->name('plan.index');
 Route::post('/payment', [PayController::class, 'register'])->name('pay.register');
+Route::get('/albumList', [AlbumController::class, 'index'])->name('album.index');
+Route::get('/songsUser', [SongController::class, 'index2'])->name('song.index2');
 
 Route::get('/dashboard', function () {
     return view('dashboard.home');
@@ -73,9 +75,6 @@ Route::get('/añadir_musica', function () {
     return view('musica.añadir_musica');
 })->name('musica.añadir_musica');
 
-Route::get('/albums', function () {
-    return view('album.albums');
-})->name('album.albums');
 
 Route::get('/artists', function () {
     return view('artists.artists');
