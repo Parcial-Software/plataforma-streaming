@@ -60,7 +60,23 @@
                      </button>
                      <ul class="dropdown-menu dropdown-menu-sm" id="player_options">
                          <li><a class="dropdown-item" href="javascript:void(0);" role="button" data-favorite-id="1">Favorite</a></li>
-                         <li><a class="dropdown-item" href="javascript:void(0);" role="button" data-playlist-id="1">Add to playlist</a></li>
+                         <li>
+                             <button class="px-3 py-1 bg-#92929F rounded-sm flex items-start min-w-32">
+                                 <span class="font-semibold text-start">Add to playlist</span>
+                                 <span>
+                                     <svg class="fill-current h-4 w-4 transform group-hover:-rotate-180
+        transition duration-150 ease-in-out" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                     </svg>
+                                 </span>
+                             </button>
+                             <ul class="bg-black transform scale-0 group-hover:scale-100 absolute 
+  transition duration-150 ease-in-out origin-top-right min-w-32">
+                                 <li><a class="dropdown-item" href="#" download>Playlist1</a></li>
+                                 <li><a class="dropdown-item" href="#" download>Playlist2</a></li>
+                                 <li><a class="dropdown-item" href="#" download>Playlist3</a></li>
+                             </ul>
+                         </li>
                          <li><a class="dropdown-item" href="audio/ringtone-1.mp3" download>Download</a></li>
                          <li><a class="dropdown-item" href="javascript:void(0);" role="button">Share</a></li>
                          <li class="dropdown-divider"></li>
@@ -92,5 +108,39 @@
              </div>
          </div>
      </div>
+     <style>
+         li>ul {
+             transform: translatex(100%) scale(0)
+         }
+
+         li:hover>ul {
+             transform: translatex(101%) scale(1)
+         }
+
+         li>button svg {
+             transform: rotate(-90deg)
+         }
+
+         li:hover>button svg {
+             transform: rotate(-270deg)
+         }
+
+         .group:hover .group-hover\:scale-100 {
+             transform: scale(1)
+         }
+
+         .group:hover .group-hover\:-rotate-180 {
+             transform: rotate(180deg)
+         }
+
+         .scale-0 {
+             transform: scale(0)
+         }
+
+         .min-w-32 {
+             min-width: 8rem
+         }
+     </style>
+     <script src="https://cdn.tailwindcss.com"></script>
  </div>
  <!-- End:: player -->
