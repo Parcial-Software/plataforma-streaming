@@ -63,7 +63,7 @@
                                     <div class="mb-5">
                                         <button type="submit" class="btn btn-primary w-100">Registrar</button>
                                     </div>
-                                    <p>¿Ya tienes una cuenta? <br><a href="login.html"
+                                    <p>¿Ya tienes una cuenta? <br><a href="{{ route('login') }}"
                                             class="fw-medium external">Iniciar Sesión</a></p>
                                 </form>
                             </div>

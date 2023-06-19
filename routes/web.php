@@ -4,8 +4,11 @@ use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GenderController;
 use App\Http\Controllers\GeneroController;
+use App\Http\Controllers\PlanController;
+use App\Http\Controllers\PayController;
 use App\Http\Controllers\SongController;
 use App\Models\Genero;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +23,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $apiUrl = config('apiUrl');
+    $plans = Http::get($apiUrl . 'plans' )->json();
+    return view('welcome', compact('plans'));
 });
 
 Route::post('/login', [AuthController::class, 'login'])->name('loginApi');
@@ -30,7 +35,8 @@ Route::get('/gender/{id}', [GenderController::class, 'show'])->name('gender.show
 Route::post('/album', [AlbumController::class, 'store'])->name('album.store');
 Route::get('/song', [SongController::class, 'index'])->name('song.index');
 Route::post('/song', [SongController::class, 'store'])->name('song.store');
-
+Route::get('/plans', [PlanController::class, 'index'])->name('plan.index');
+Route::post('/payment', [PayController::class, 'register'])->name('pay.register');
 
 Route::get('/dashboard', function () {
     return view('dashboard.home');
@@ -78,5 +84,9 @@ Route::get('/artists', function () {
 Route::get('/history', function () {
     return view('history.history');
 })->name('history.history');
+
+Route::get('/payment', function () {
+    return view('payment.pay');
+})->name('payment.pay');
 
 
