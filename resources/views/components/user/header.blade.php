@@ -355,7 +355,7 @@
                                  </a>
                              </li>
                              <li>
-                                 <a class="dropdown-item d-flex align-items-center" href="plan.html">
+                                 <a class="dropdown-item d-flex align-items-center" href="{{ route('plan.index') }}">
                                      <i class="ri-money-dollar-circle-line fs-5"></i>
                                      <span class="ps-2">Plan</span>
                                  </a>

@@ -239,76 +239,55 @@
                 <div class="pt-4 mx-auto col-xl-11 col-lg-8">
                     <!-- Start:: plan [[ Find at scss/framework/plan.scss ]] -->
                     <div class="plan bg-light">
-                        <div class="overflow-hidden card plan__info">
-                            <div class="p-0 card-body d-flex flex-column">
+                        <div class="card plan__info overflow-hidden">
+                            <div class="card-body d-flex flex-column p-0">
                                 <div class="p-4">
-                                    <h4 class="mb-3">Free <span class="text-primary">Trial</span></h4>
-                                    <p class="fs-6">Get 30 days <b>Free Trial</b> subscription plan to experience
-                                        awesome
-                                        music.</p>
-                                    <a href="register.html" class="d-inline-flex align-items-center">
-                                        <span class="me-1">Register now</span>
-                                        <i class="ri-arrow-right-line fs-6"></i>
-                                    </a>
+                                    <h4 class="mb-3">Plan <span class="text-primary">{{ $plans[0]['name'] }}</span></h4>
+                                    <p class="fs-6 opacity-50">Lo que obtendrás</p>
+                                    <div class="d-flex mb-3">
+                                        <i class="ri-checkbox-circle-fill text-primary opacity-75 fs-6"></i>
+                                        <span class="ps-2">{{ $plans[1]['description'] }}</span>
+                                    </div>
                                 </div>
-                                <div class="px-3 mt-auto text-center">
-                                    <img src="images/misc/plan.png" class="img-fluid" alt="">
+                                <div class="card-footer mt-5 pb-4 pb-sm-0">
+                                    <div class="text-dark mb-3"><span class="fs-4 fw-bold">$ {{ $plans[0]['price'] }}</span></div>
+                                    <button type="button" class="btn btn-primary w-100" onclick="window.location='/login'">Comprar</button>
                                 </div>
                             </div>
                         </div>
                         <div class="plan__data">
                             <div class="card plan__col">
                                 <div class="card-body fw-medium">
-                                    <div class="mb-4 d-flex align-items-center text-dark">
+                                    <div class="d-flex align-items-center text-dark mb-4">
                                         <i class="ri-music-2-line fs-3"></i>
-                                        <h4 class="mb-0 ps-3">Ads <span class="text-primary">free</span></h4>
+                                        <h4 class="mb-0 ps-3">Plan <span class="text-primary">{{ $plans[1]['name'] }}</span></h4>
                                     </div>
-                                    <p class="opacity-50 fs-6">What you'll get</p>
-                                    <div class="mb-3 d-flex">
-                                        <i class="opacity-75 ri-checkbox-circle-fill text-primary fs-6"></i>
-                                        <span class="ps-2">Access all free tracks and app features</span>
-                                    </div>
-                                    <div class="mb-3 d-flex">
-                                        <i class="opacity-75 ri-checkbox-circle-fill text-primary fs-6"></i>
-                                        <span class="ps-2">No Ads between tracks</span>
+                                    <p class="fs-6 opacity-50">Lo que obtendrás</p>
+                                    <div class="d-flex mb-3">
+                                        <i class="ri-checkbox-circle-fill text-primary opacity-75 fs-6"></i>
+                                        <span class="ps-2">{{ $plans[1]['description'] }}</span>
                                     </div>
                                 </div>
-                                <div class="pb-4 card-footer pb-sm-0">
-                                    <div class="mb-3 text-dark"><span class="fs-4 fw-bold">$10.99</span>/year</div>
-                                    <button type="button" class="btn btn-primary w-100">Choose</button>
+                                <div class="card-footer pb-4 pb-sm-0">
+                                    <div class="text-dark mb-3"><span class="fs-4 fw-bold">$ {{ $plans[1]['price'] }}</span></div>
+                                    <button type="button" class="btn btn-primary w-100" onclick="window.location='/login'">Comprar</button>
                                 </div>
                             </div>
                             <div class="card plan__col">
                                 <div class="card-body fw-medium">
-                                    <div class="mb-4 d-flex align-items-center text-dark">
+                                    <div class="d-flex align-items-center text-dark mb-4">
                                         <i class="ri-vip-crown-line fs-3"></i>
-                                        <h4 class="mb-0 ps-3">Premium</h4>
+                                        <h4 class="mb-0 ps-3">Plan <span class="text-primary">{{ $plans[2]['name'] }}</span></h4>
                                     </div>
-                                    <p class="opacity-50 fs-6">What you'll get</p>
-                                    <div class="mb-3 d-flex">
-                                        <i class="opacity-75 ri-checkbox-circle-fill text-primary fs-6"></i>
-                                        <span class="ps-2">Access all free tracks and app features</span>
-                                    </div>
-                                    <div class="mb-3 d-flex">
-                                        <i class="opacity-75 ri-checkbox-circle-fill text-primary fs-6"></i>
-                                        <span class="ps-2">No Ads between tracks</span>
-                                    </div>
-                                    <div class="mb-3 d-flex">
-                                        <i class="opacity-75 ri-checkbox-circle-fill text-primary fs-6"></i>
-                                        <span class="ps-2">Create playlist & access analytics</span>
-                                    </div>
-                                    <div class="mb-3 d-flex">
-                                        <i class="opacity-75 ri-checkbox-circle-fill text-primary fs-6"></i>
-                                        <span class="ps-2">Listen paid track once & purchase</span>
-                                    </div>
-                                    <div class="mb-3 d-flex">
-                                        <i class="opacity-75 ri-checkbox-circle-fill text-primary fs-6"></i>
-                                        <span class="ps-2">Download and listen offline</span>
+                                    <p class="fs-6 opacity-50">Lo que obtendrás</p>
+                                    <div class="d-flex mb-3">
+                                        <i class="ri-checkbox-circle-fill text-primary opacity-75 fs-6"></i>
+                                        <span class="ps-2">{{ $plans[2]['description'] }}</span>
                                     </div>
                                 </div>
                                 <div class="card-footer">
-                                    <div class="mb-3 text-dark"><span class="fs-4 fw-bold">$99.99</span>/year</div>
-                                    <button type="button" class="btn btn-primary w-100">Choose</button>
+                                    <div class="text-dark mb-3"><span class="fs-4 fw-bold">$ {{ $plans[2]['price'] }}</span></div>
+                                    <button type="button" class="btn btn-primary w-100" onclick="window.location='/login'">Comprar</button>
                                 </div>
                             </div>
                         </div>
@@ -382,7 +361,7 @@
                     <p>Únete a la revolución musical. Suscríbete a SoundStream y desbloquea un universo de música
                         ilimitada,
                         exclusiva y sin interrupciones. ¡La banda sonora perfecta para tu vida!</p>
-                    <a href="register.html" class="mt-3 btn btn-lg btn-light external">Regístrate Ahora</a>
+                    <a href="{{ route('register') }}" class="mt-3 btn btn-lg btn-light external">Regístrate Ahora</a>
                 </div>
             </div>
             <!-- End:: newsletter -->

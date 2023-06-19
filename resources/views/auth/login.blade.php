@@ -49,7 +49,7 @@
                                         <div class="mb-5">
                                             <button class="btn btn-primary w-100" type="submit">Iniciar Sesion</button>
                                         </div>
-                                        <p>¿Todavía no estás registrado? <br><a href="register.html" class="fw-medium external">Registrarse</a></p>
+                                        <p>¿Todavía no estás registrado? <br><a href="{{ route('register') }}" class="fw-medium external">Registrarse</a></p>
                                     </form>
                                 </div>
                             </div>
