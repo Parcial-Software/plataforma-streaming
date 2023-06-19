@@ -49,7 +49,7 @@
                                     </div>
                                     <div class="pb-4 mt-5 card-footer pb-sm-0">
                                         <div class="mb-3 text-dark"><span class="fs-4 fw-bold">$ {{ $plans[0]['price'] }}</span></div>
-                                        <button type="button" class="btn btn-primary w-100" onclick="window.location='/payment'">Comprar</button>
+                                        <button type="button" class="btn btn-outline-primary w-100" onclick="window.location='/payment'">Comprar</button>
                                     </div>
                                 </div>
                             </div>
@@ -68,7 +68,7 @@
                                     </div>
                                     <div class="pb-4 card-footer pb-sm-0">
                                         <div class="mb-3 text-dark"><span class="fs-4 fw-bold">$ {{ $plans[1]['price'] }}</span></div>
-                                        <button type="button" class="btn btn-primary w-100" onclick="window.location='/payment'">Comprar</button>
+                                        <button type="button" class="btn btn-outline-primary w-100" onclick="window.location='/payment'">Comprar</button>
                                     </div>
                                 </div>
                                 <div class="card plan__col">
@@ -85,7 +85,7 @@
                                     </div>
                                     <div class="card-footer">
                                         <div class="mb-3 text-dark"><span class="fs-4 fw-bold">$ {{ $plans[2]['price'] }}</span></div>
-                                        <button type="button" class="btn btn-primary w-100" onclick="window.location='/payment'">Comprar</button>
+                                        <button type="button" class="btn btn-outline-primary w-100" onclick="window.location='/payment'">Comprar</button>
                                     </div>
                                 </div>
                             </div>
