@@ -21,8 +21,10 @@ class AlbumController extends Controller
         $response = Http::get($apiUrl . 'Songs');
         $songs = $response->json();
     
+        $response = Http::get($apiUrl . 'playlists/user/' . session('id'));
+        $playlists = $response->json();
 
-        return view('album.index', compact('albums', 'userAlbums', 'songs'));
+        return view('album.index', compact('albums', 'userAlbums', 'songs', 'playlists'));
     }
 
     public function store(Request $request)

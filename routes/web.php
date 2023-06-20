@@ -6,6 +6,7 @@ use App\Http\Controllers\GenderController;
 use App\Http\Controllers\GeneroController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\PayController;
+use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\SongController;
 use App\Models\Genero;
 use Illuminate\Support\Facades\Http;
@@ -33,12 +34,13 @@ Route::post('/register', [AuthController::class, 'register'])->name('registerApi
 Route::get('/genders', [GenderController::class, 'index'])->name('gender.index');
 Route::get('/gender/{id}', [GenderController::class, 'show'])->name('gender.show');
 Route::post('/album', [AlbumController::class, 'store'])->name('album.store');
-Route::get('/song', [SongController::class, 'index'])->name('song.index');
+Route::get('/songs', [SongController::class, 'index'])->name('song.index');
 Route::post('/song', [SongController::class, 'store'])->name('song.store');
 Route::get('/plans', [PlanController::class, 'index'])->name('plan.index');
 Route::post('/payment', [PayController::class, 'register'])->name('pay.register');
 Route::get('/albumList', [AlbumController::class, 'index'])->name('album.index');
 Route::get('/songsUser', [SongController::class, 'index2'])->name('song.index2');
+Route::get('playlist', [PlaylistController::class, 'create'])->name('playlist.create');
 
 Route::get('/dashboard', function () {
     return view('dashboard.home');

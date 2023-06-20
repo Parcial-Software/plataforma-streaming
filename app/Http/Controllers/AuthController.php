@@ -54,6 +54,7 @@ class AuthController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'password' => 'required',
+            'pais' => 'required',
         ]);
 
         if ($validator->fails()) {
@@ -65,7 +66,8 @@ class AuthController extends Controller
             'name' => $request->input('name'),
             'email' => $request->input('email'),
             'password' => $request->input('password'),
-            'roleId' => 2,
+            'pais' => $request->input('pais'),
+            'roleId' => 4,
         ]);
        
         if ($response->status() != 201){ 
