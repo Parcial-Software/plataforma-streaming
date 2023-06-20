@@ -44,6 +44,10 @@
                                         <label for="email" class="form-label fw-medium">Correo electrónico</label>
                                         <input type="text" name="email" id="email" class="form-control">
                                     </div>
+                                    <div class="mb-3">
+                                        <label for="pais" class="form-label fw-medium">Pais</label>
+                                        <input type="text" name="pais" id="pais" class="form-control">
+                                    </div>
                                     <div class="mb-2">
                                         <label for="password" class="form-label fw-medium">Contraseña</label>
                                         <input type="password" name="password" id="password" class="form-control">

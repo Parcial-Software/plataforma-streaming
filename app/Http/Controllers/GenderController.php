@@ -11,6 +11,7 @@ class GenderController extends Controller
     {
         $apiUrl = config('apiUrl');
         $genders = Http::get($apiUrl . 'genders' )->json();
+        
         return view('genero.index', compact('genders'));
     }
 
@@ -18,8 +19,14 @@ class GenderController extends Controller
     {
         $apiUrl = config('apiUrl');
         $songs = Http::get($apiUrl . 'songs/gender/' . $genderId)->json();
-        return view('genero.show', compact('songs'));
+
+        $response = Http::get($apiUrl . 'playlists/user/' . session('id'));
+        $playlists = $response->json();
+
+        
+
+        return view('genero.show', compact('songs', 'playlists'));
     }
-    
+   
     
 }
