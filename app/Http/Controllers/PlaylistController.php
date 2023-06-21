@@ -14,7 +14,8 @@ class PlaylistController extends Controller
         $apiUrl = config('apiUrl');
         $response = Http::get($apiUrl . 'playlists/user/' . session('id'));
         $playlists = $response->json();
-        return view('components.user.player')->with('playlists', $playlists);
+
+        return view('playlist.index', compact('playlists'));
     }
 
     public function create()
@@ -34,5 +35,16 @@ class PlaylistController extends Controller
         ])->json();
 
         return redirect()->route('dashboard');
+    }
+
+    public function playlistSong($playlistId, $songId)
+    {
+        $apiUrl = config('apiUrl');
+        $response = Http::post($apiUrl . 'PlaylistSongs', [
+            'playlistId' => $playlistId,
+            'songId' => $songId,
+        ])->json();
+
+        return back();
     }
 }

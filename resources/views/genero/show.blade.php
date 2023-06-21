@@ -29,7 +29,7 @@
 
                 <!-- Hero [[ Find at scss/framework/hero.scss ]] -->
                 <div class="hero" style="background-image: url(images/banner/portada-5.png);"></div>
-                
+
                 <!-- Start:: under hero [[ Find at scss/framework/hero.scss ]] -->
                 <div class="container under-hero">
 
@@ -116,9 +116,16 @@
                                                                         href="{{ route('playlist.create') }}"
                                                                         download>Crear Playlist</a></li>
                                                                 <li class="divider"></li> <!-- Línea divisoria -->
+
                                                                 @foreach ($playlists as $playlist)
-                                                                    <li><a class="dropdown-item" href="#"
-                                                                            download>{{ $playlist['name'] }}</a></li>
+                                                                    <form method="POST"
+                                                                        action="{{ route('playlist.playlistSong', ['playlistId' => $playlist['id'], 'songId' => $song['id']]) }}">
+                                                                        @csrf
+                                                                        <li>
+                                                                            <button type="submit"
+                                                                                class="playlist-button">{{ $playlist['name'] }}</button>
+                                                                        </li>
+                                                                    </form>
                                                                 @endforeach
                                                             </ul>
                                                         </li>
@@ -150,6 +157,20 @@
     </body>
 
     <style>
+        .playlist-button {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 8px 20px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .playlist-button:hover {
+            background-color: #333;
+        }
+
         .divider {
             border-bottom: 1px solid white;
             /* Estilo de la línea divisoria */
