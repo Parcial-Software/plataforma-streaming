@@ -58,7 +58,7 @@
                                     <div class="card-body">
                                         <div class="tab-content" id="add_music_content">
                                             <div class="tab-pane fade show active" id="album_pane" role="tabpanel" aria-labelledby="album" tabindex="0">
-                                                <form method="POST" action="#" enctype="multipart/form-data"
+                                                <form method="POST" action="{{route('playlist.store')}}" enctype="multipart/form-data"
                                                     class="row">
                                                     @csrf
 

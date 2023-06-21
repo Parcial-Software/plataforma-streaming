@@ -41,6 +41,12 @@
                           <span class="ps-3">Albums</span>
                       </a>
                   </li>
+                  <li class="nav-item">
+                    <a href="{{route('playlist.index')}}" class="nav-link d-flex align-items-center">
+                        <i class="ri-mic-line fs-5"></i>
+                        <span class="ps-3">Playlist</span>
+                    </a>
+                </li>
                   
                   <li class="nav-item nav-item--head">
                       <span class="nav-item--head__text">Music</span>

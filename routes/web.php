@@ -8,6 +8,7 @@ use App\Http\Controllers\PlanController;
 use App\Http\Controllers\PayController;
 use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\SongController;
+use App\Http\Controllers\SubscriptionsController;
 use App\Models\Genero;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
@@ -40,7 +41,11 @@ Route::get('/plans', [PlanController::class, 'index'])->name('plan.index');
 Route::post('/payment', [PayController::class, 'register'])->name('pay.register');
 Route::get('/albumList', [AlbumController::class, 'index'])->name('album.index');
 Route::get('/songsUser', [SongController::class, 'index2'])->name('song.index2');
-Route::get('playlist', [PlaylistController::class, 'create'])->name('playlist.create');
+Route::get('playlistCreate', [PlaylistController::class, 'create'])->name('playlist.create' );
+Route::post('/playlist', [PlaylistController::class, 'store'])->name('playlist.store');
+Route::get('/playlist', [PlaylistController::class, 'index'])->name('playlist.index');
+Route::post('/subscription/{id}', [SubscriptionsController::class, 'pay'])->name('subscription.pay');
+Route::post('/playlist/{playlistId}/song/{songId}', [PlaylistController::class, 'playlistSong'])->name('playlist.playlistSong');
 
 Route::get('/dashboard', function () {
     return view('dashboard.home');

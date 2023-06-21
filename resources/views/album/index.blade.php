@@ -63,7 +63,7 @@
                                                             <li><a class="dropdown-item" href="javascript:void(0);"
                                                                     role="button" data-favorite-id="100">Favorito</a>
                                                             </li>
-                                                            <li><a class="dropdown-item" href="{{ $album['imageUrl']}}"
+                                                            <li><a class="dropdown-item" href="{{ $album['imageUrl'] }}"
                                                                     download>Descargar</a></li>
                                                             <li><a class="dropdown-item" href="javascript:void(0);"
                                                                     role="button">Compartir</a></li>
@@ -128,7 +128,7 @@
                                                             <li><a class="dropdown-item" href="javascript:void(0);"
                                                                     role="button" data-favorite-id="100">Favorito</a>
                                                             </li>
-                                                         
+
                                                             <li><a class="dropdown-item" href="javascript:void(0);"
                                                                     role="button">Compartir</a></li>
                                                             <li class="dropdown-divider"></li>
@@ -164,8 +164,11 @@
 
                 <!-- Start:: section [[ Find at scss/framework/section.scss ]] -->
                 <div class="section">
+                    <div class="section__head">
+                        <h3 class="mb-0">Las<span class="text-primary"> Canciones mas Populares</span></h3>
+                    </div>
                     <div class="section__head align-items-center">
-                        <span class="d-block pe-3 fs-6 fw-semi-bold">{{ count($songs)}} Canciones </span>
+                        <span class="d-block pe-3 fs-6 fw-semi-bold">{{ count($songs) }} Canciones </span>
                         <div>
                             <select class="form-select" aria-label="Filter album">
                                 <option value="Popular">Popular</option>
@@ -177,9 +180,15 @@
                     </div>
 
                     <!-- Start:: list [[ Find at scss/components/list.scss ]] -->
+                    @php
+                        $songsCollection = collect($songs);
+                        $chunkedSongs = $songsCollection->chunk(10);
+                    @endphp
+
                     <div class="list">
-                        @foreach ($songs as $song)
-                                <div class="row">
+                        @foreach ($chunkedSongs as $chunk)
+                            <div class="row">
+                                @foreach ($chunk as $song)
                                     <div class="col-xl-6">
                                         <div class="list__item" data-song-id="{{ $song['id'] }}"
                                             data-song-name="{{ $song['name'] }}"
@@ -187,7 +196,6 @@
                                             data-song-album="{{ $song['album'] }}"
                                             data-song-url="{{ $song['fileUrl'] }}"
                                             data-song-cover="{{ $song['imageUrl'] }}">
-
                                             <div class="list__cover">
                                                 <img src="{{ $song['imageUrl'] }}" alt="{{ $song['name'] }}">
                                                 <a href=""
@@ -206,8 +214,9 @@
                                             </div>
                                             <ul class="list__option">
                                                 <li>
-                                                    <a href="javascript:void(0);" role="button" class="d-inline-flex"
-                                                        aria-label="Favorite" data-favorite-id="{{ $song['id'] }}">
+                                                    <a href="javascript:void(0);" role="button"
+                                                        class="d-inline-flex" aria-label="Favorite"
+                                                        data-favorite-id="{{ $song['id'] }}">
                                                         <i class="ri-heart-line heart-empty"></i>
                                                         <i class="ri-heart-fill heart-fill"></i>
                                                     </a>
@@ -218,9 +227,9 @@
                                                         class="amplitude-duration-seconds"></span></li>
 
                                                 <li class="dropstart d-inline-flex">
-                                                    <a class="dropdown-link" href="javascript:void(0);" role="button"
-                                                        data-bs-toggle="dropdown" aria-label="Cover options"
-                                                        aria-expanded="false">
+                                                    <a class="dropdown-link" href="javascript:void(0);"
+                                                        role="button" data-bs-toggle="dropdown"
+                                                        aria-label="Cover options" aria-expanded="false">
                                                         <i class="ri-more-fill"></i>
                                                     </a>
                                                     <ul class="dropdown-menu dropdown-menu-sm">
@@ -254,20 +263,31 @@
                                                                         href="{{ route('playlist.create') }}"
                                                                         download>Crear Playlist</a></li>
                                                                 <li class="divider"></li> <!-- Línea divisoria -->
+
                                                                 @foreach ($playlists as $playlist)
-                                                                    <li><a class="dropdown-item" href="#"
-                                                                            download>{{ $playlist['name'] }}</a></li>
+                                                                    <form method="POST"
+                                                                        action="{{ route('playlist.playlistSong', ['playlistId' => $playlist['id'], 'songId' => $song['id']]) }}">
+                                                                        @csrf
+                                                                        <li>
+                                                                            <button type="submit"
+                                                                                class="playlist-button">{{ $playlist['name'] }}</button>
+                                                                        </li>
+                                                                    </form>
                                                                 @endforeach
                                                             </ul>
+
                                                         </li>
                                                     </ul>
                                                 </li>
                                             </ul>
                                         </div>
                                     </div>
-                                </div>
-                            @endforeach
+                                @endforeach
+                            </div>
+                        @endforeach
                     </div>
+
+
                     <!-- End:: list -->
 
 
@@ -315,6 +335,20 @@
     </body>
 
     <style>
+        .playlist-button {
+            display: block;
+            width: 100%;
+            text-align: left;
+            padding: 8px 20px;
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+
+        .playlist-button:hover {
+            background-color: #333;
+        }
+
         .divider {
             border-bottom: 1px solid white;
             /* Estilo de la línea divisoria */

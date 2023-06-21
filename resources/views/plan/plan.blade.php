@@ -40,16 +40,23 @@
                             <div class="overflow-hidden card plan__info">
                                 <div class="p-0 card-body d-flex flex-column">
                                     <div class="p-4">
-                                        <h4 class="mb-3">Plan <span class="text-primary">{{ $plans[0]['name'] }}</span></h4>
+                                        <h4 class="mb-3">Plan <span
+                                                class="text-primary">{{ $plans[0]['name'] }}</span></h4>
                                         <p class="opacity-50 fs-6">Lo que obtendrás</p>
                                         <div class="mb-3 d-flex">
                                             <i class="opacity-75 ri-checkbox-circle-fill text-primary fs-6"></i>
-                                            <span class="ps-2">{{ $plans[1]['description'] }}</span>
+                                            <span class="ps-2">{{ $plans[0]['description'] }}</span>
                                         </div>
                                     </div>
                                     <div class="pb-4 mt-5 card-footer pb-sm-0">
-                                        <div class="mb-3 text-dark"><span class="fs-4 fw-bold">$ {{ $plans[0]['price'] }}</span></div>
-                                        <button type="button" class="btn btn-outline-primary w-100" onclick="window.location='/payment'">Comprar</button>
+                                        <div class="mb-3 text-dark"><span class="fs-4 fw-bold">$
+                                                {{ $plans[0]['price'] }}</span></div>
+                                        <form method="POST" action="{{ route('subscription.pay', $plans[0]['id']) }}">
+                                            @csrf
+                                            <input type="hidden" name="amount" value="{{ $plans[0]['price'] }}">
+                                            <button type="submit"
+                                                class="btn btn-outline-primary w-100">Comprar</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -58,7 +65,8 @@
                                     <div class="card-body fw-medium">
                                         <div class="mb-4 d-flex align-items-center text-dark">
                                             <i class="ri-music-2-line fs-3"></i>
-                                            <h4 class="mb-0 ps-3">Plan <span class="text-primary">{{ $plans[1]['name'] }}</span></h4>
+                                            <h4 class="mb-0 ps-3">Plan <span
+                                                    class="text-primary">{{ $plans[1]['name'] }}</span></h4>
                                         </div>
                                         <p class="opacity-50 fs-6">Lo que obtendrás</p>
                                         <div class="mb-3 d-flex">
@@ -67,15 +75,22 @@
                                         </div>
                                     </div>
                                     <div class="pb-4 card-footer pb-sm-0">
-                                        <div class="mb-3 text-dark"><span class="fs-4 fw-bold">$ {{ $plans[1]['price'] }}</span></div>
-                                        <button type="button" class="btn btn-outline-primary w-100" onclick="window.location='/payment'">Comprar</button>
+                                        <div class="mb-3 text-dark"><span class="fs-4 fw-bold">$
+                                                {{ $plans[1]['price'] }}</span></div>
+                                        <form method="POST" action="{{ route('subscription.pay', $plans[1]['id']) }}">
+                                            @csrf
+                                            <input type="hidden" name="amount" value="{{ $plans[1]['price'] }}">
+                                            <button type="submit"
+                                                class="btn btn-outline-primary w-100">Comprar</button>
+                                        </form>
                                     </div>
                                 </div>
                                 <div class="card plan__col">
                                     <div class="card-body fw-medium">
                                         <div class="mb-4 d-flex align-items-center text-dark">
                                             <i class="ri-vip-crown-line fs-3"></i>
-                                            <h4 class="mb-0 ps-3">Plan <span class="text-primary">{{ $plans[2]['name'] }}</span></h4>
+                                            <h4 class="mb-0 ps-3">Plan <span
+                                                    class="text-primary">{{ $plans[2]['name'] }}</span></h4>
                                         </div>
                                         <p class="opacity-50 fs-6">Lo que obtendrás</p>
                                         <div class="mb-3 d-flex">
@@ -84,8 +99,14 @@
                                         </div>
                                     </div>
                                     <div class="card-footer">
-                                        <div class="mb-3 text-dark"><span class="fs-4 fw-bold">$ {{ $plans[2]['price'] }}</span></div>
-                                        <button type="button" class="btn btn-outline-primary w-100" onclick="window.location='/payment'">Comprar</button>
+                                        <div class="mb-3 text-dark"><span class="fs-4 fw-bold">$
+                                                {{ $plans[2]['price'] }}</span></div>
+                                        <form method="POST" action="{{ route('subscription.pay', $plans[2]['id']) }}">
+                                            @csrf
+                                            <input type="hidden" name="amount" value="{{ $plans[2]['price'] }}">
+                                            <button type="submit"
+                                                class="btn btn-outline-primary w-100">Comprar</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
