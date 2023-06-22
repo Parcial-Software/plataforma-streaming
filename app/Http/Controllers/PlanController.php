@@ -17,6 +17,13 @@ class PlanController extends Controller
         return view('plan.plan', compact('plans'));
     }
 
+    public function earningsByPlanType(Request $request)
+    {
+        $grafica = Http::get('http://localhost:4000/api/earningsByPlanType');
+
+        return response($grafica, 200)->header('Content-type', 'application/json');
+    }
+
     /**
      * Show the form for creating a new resource.
      */

@@ -59,7 +59,10 @@ Route::get('/generos_detalles', function () {
 })->name('genero.generos_detalles');
 
 Route::get('/analisis', function () {
-    return view('dashboard.analisis');
+    $songs = Http::get('http://localhost:4000/api/fiveSongMoreFavorite');
+    $earning = Http::get('http://localhost:4000/api/earningsTotal');
+    
+    return view('dashboard.analisis', ['songs' =>  json_decode($songs), 'earnings' => json_decode($earning)]);
 })->name('dashboard.analisis');
 
 Route::get('/favoritos', function () {
@@ -94,5 +97,12 @@ Route::get('/history', function () {
 Route::get('/payment', function () {
     return view('payment.pay');
 })->name('payment.pay');
+
+Route::post('/amountSubscriptionsByCountry/ajax', [SubscriptionsController::class, 'subscriptionByCountry'])
+->name('subscription.bycountry');
+Route::post('/mostListenedGenders/ajax', [GenderController::class, 'gendersListened'])
+->name('gender.gendersListened');
+Route::post('/earningsByPlanType/ajax', [PlanController::class, 'earningsByPlanType'])
+->name('plan.earningsByPlanType');
 
 

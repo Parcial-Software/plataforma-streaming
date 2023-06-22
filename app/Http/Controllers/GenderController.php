@@ -27,6 +27,13 @@ class GenderController extends Controller
 
         return view('genero.show', compact('songs', 'playlists'));
     }
+
+    public function gendersListened(Request $request)
+    {
+        $grafica = Http::get('http://localhost:4000/api/mostListenedGenders');
+
+        return response($grafica, 200)->header('Content-type', 'application/json');
+    }
    
     
 }
