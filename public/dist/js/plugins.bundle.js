@@ -8419,7 +8419,7 @@ jQuery.fn.extend( {
 		var className, elem,
 			i = 0;
 
-		className = " " + selector + " ";
+		className = "" + selector + " ";
 		while ( ( elem = this[ i++ ] ) ) {
 			if ( elem.nodeType === 1 &&
 				( " " + stripAndCollapse( getClass( elem ) ) + " " ).indexOf( className ) > -1 ) {
@@ -29921,7 +29921,29 @@ var CurrentMinuteElements = function () {
       if (playlist == null && songIndex == null) {
         currentMinuteSelectors[i].innerHTML = minutes;
       }
+
+	  // Obtener el elemento del texto resaltado
+	  var highlightedTextElement = document.querySelector('strong[style="font-size: 20px;"]');
+  
+	  // Verificar si el elemento existe
+	  if (highlightedTextElement) {
+		  // Hacer scroll hacia el elemento resaltado
+		  highlightedTextElement.scrollIntoView({ behavior: 'auto', block: 'center' });
+	  }
     }
+
+	if (window.Livewire) {
+		var currentSongElement = document.getElementById('currentSongId');
+		
+		var currentSongId = parseInt(currentSongElement.innerText);
+		var currentTime = Amplitude.getSongPlayedSeconds();
+
+		console.log("time: " + currentTime);
+		console.log("id:" + currentSongId);
+
+		Livewire.emit('current-song', currentTime, currentSongId);
+	  }
+	
   }
 
   /**

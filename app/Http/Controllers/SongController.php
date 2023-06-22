@@ -63,18 +63,22 @@ class SongController extends Controller
             'document', 
             file_get_contents($file), 
             $file->getClientOriginalName() 
-        )->put($apiUrl . 'Songs/uploadFile/' . $response['id']); 
+        )->put($apiUrl . 'Songs/uploadFile/' . $response['id'])->json(); 
 
         $image = $request->file('image');
         $response = Http::attach(
             'document', 
             file_get_contents($image), 
             $image->getClientOriginalName() 
-        )->put($apiUrl . 'Songs/uploadImage/' . $response['id']); 
-
-        if ($response->status() != 200) {
-            return redirect()->back()->withErrors(['error' => 'Error al crear la cancion'])->withInput();
-        }
+        )->put($apiUrl . 'Songs/uploadImage/' . $response['id'])->json(); 
+        
+        $song = $response;
+        
+        $aiUrl = config('aiUrl');
+        $response = Http::post($aiUrl, [
+            'id' => $song['id'],
+            'data' => $song['fileUrl']
+        ])->json();
 
         return redirect()->route('dashboard')->with('success', 'Cancion creada correctamente');
     }
