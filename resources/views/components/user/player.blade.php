@@ -14,6 +14,7 @@
                      <img data-amplitude-song-info="cover_art_url" src="images/cover/small/1.jpg" alt="">
                  </div>
                  <div class="cover__content ps-3 d-none d-sm-block">
+                     <a href="#" style="display: none;" id="currentSongId" data-amplitude-song-info="id"></a>
                      <a href="song-details.html" class="cover__title text-truncate" data-amplitude-song-info="name"></a>
                      <a href="artist-details.html" class="cover__subtitle text-truncate"
                          data-amplitude-song-info="artist"></a>
@@ -44,10 +45,14 @@
                  </button>
              </div>
 
+
+             <script></script>
+
              <div class="player-info">
                  <div class="me-4 d-none d-xl-block">
                      <span class="amplitude-current-minutes"></span>:<span class="amplitude-current-seconds"></span> /
                      <span class="amplitude-duration-minutes"></span>:<span class="amplitude-duration-seconds"></span>
+                     <span class="amplitude-current-time"></span>
                  </div>
                  <div class="player-volume dropdown d-none d-md-block">
                      <button class="btn btn-icon" data-bs-toggle="dropdown" data-bs-auto-close="outside"
@@ -77,6 +82,22 @@
                  </div>
 
                  <!-- Start:: playlist [[ Find at scss/framework/playlist.scss ]] -->
+                 <div class="playlist dropstart me-3">
+                     <button class="btn btn-icon" data-bs-toggle="dropdown" data-bs-auto-close="outside"
+                         aria-label="Playlist" aria-expanded="false">
+                         <i class="ri-mic-line fs-5"></i>
+                     </button>
+                     <div class="dropdown-menu playlist__dropdown">
+                         <div class="playlist__head d-flex align-items-center justify-content-between">
+                             <h6 class="mb-0">Letra</h6>
+                         </div>
+                         <!-- Start:: lyric [[ Find at scss/components/list.scss ]] -->
+                         <div id="lyrics" class="list playlist__body" data-scroll="true">
+                            <livewire:lyrics-transcriptor />
+                         </div>
+                         <!-- End:: list -->
+                     </div>
+                 </div>
                  <div class="playlist dropstart me-3">
                      <button class="btn btn-icon" data-bs-toggle="dropdown" data-bs-auto-close="outside"
                          aria-label="Playlist" aria-expanded="false">

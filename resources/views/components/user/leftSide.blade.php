@@ -18,7 +18,7 @@
           <nav class="p-0 navbar d-block">
               <ul class="navbar-nav">
                   <li class="nav-item">
-                      <a href="{{ route('dashboard') }}" class="nav-link d-flex align-items-center">
+                      <a href="{{ route('home.index') }}" class="nav-link d-flex align-items-center">
                           <i class="ri-home-4-line fs-5"></i>
                           <span class="ps-3">Home</span>
                       </a>

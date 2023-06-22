@@ -4,9 +4,11 @@ use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GenderController;
 use App\Http\Controllers\GeneroController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\PayController;
 use App\Http\Controllers\PlaylistController;
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SongController;
 use App\Http\Controllers\SubscriptionsController;
 use App\Models\Genero;
@@ -46,10 +48,10 @@ Route::post('/playlist', [PlaylistController::class, 'store'])->name('playlist.s
 Route::get('/playlist', [PlaylistController::class, 'index'])->name('playlist.index');
 Route::post('/subscription/{id}', [SubscriptionsController::class, 'pay'])->name('subscription.pay');
 Route::post('/playlist/{playlistId}/song/{songId}', [PlaylistController::class, 'playlistSong'])->name('playlist.playlistSong');
+Route::get('/perfil', [ProfileController::class, 'index'])->name('perfil.index');
+Route::get('/home', [HomeController::class, 'index'])->name('home.index');
+Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
 
-Route::get('/dashboard', function () {
-    return view('dashboard.home');
-})->name('dashboard');
 Route::get('/music', function () {
     return view('musica.music');
 })->name('musica.music');
