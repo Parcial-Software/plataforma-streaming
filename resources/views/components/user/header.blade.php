@@ -337,9 +337,9 @@
                              </li>
                              <li class="dropdown-divider"></li>
                              <li>
-                                 <a class="dropdown-item d-flex align-items-center" href="profile.html">
+                                 <a class="dropdown-item d-flex align-items-center" href="{{route('perfil.index')}}">
                                      <i class="ri-user-3-line fs-5"></i>
-                                     <span class="ps-2">Profile</span>
+                                     <span class="ps-2">Perfil</span>
                                  </a>
                              </li>
                              <li>
