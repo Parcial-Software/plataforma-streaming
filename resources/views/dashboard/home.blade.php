@@ -37,7 +37,7 @@
                         <div class="section__head">
                             <div class="flex-grow-1">
                                 <span class="section__subtitle">ESCUCHA LAS MEJORES LISTAS</span>
-                                <h3 class="mb-0">Las Canciones <span class="text-primary">mas Populares</span></h3>
+                                <h3 class="mb-0 text-3xl">Las Canciones <span class="text-primary">mas Populares</span></h3>
                             </div>
                             <a href="songs.html" class="btn btn-link">View All</a>
                         </div>
@@ -88,7 +88,7 @@
                                             </div>
                                             <div class="cover__image">
                                                 <img src="{{ $song['imageUrl'] }}" alt="{{ $song['name'] }}"style="width: 300px; height: 250px;">
-                                                <button type="button" class="btn btn-play btn-default btn-icon rounded-pill"
+                                                <button type="button" onclick="addToPlayer(event, `{{ $song['id'] }}`);" class="btn btn-play btn-default btn-icon rounded-pill"
                                                     data-play-id="{{ $song['id'] }}">
                                                     <i class="ri-play-fill icon-play"></i>
                                                     <i class="ri-pause-fill icon-pause"></i>
@@ -200,4 +200,27 @@
         <div id="backdrop"></div>
 
     </body>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        function addToPlayer(event, songId) {
+            event.preventDefault();
+            $.ajax({
+                url: '/addToPlayer',
+                type: 'POST',
+                data: {
+                    songId: songId,
+                    _token: $('input[name="_token"]').val()
+                },
+                success: function(response) {
+                    console.log(response);
+                    $(event.target).addClass('addPlayer');
+
+                },
+                error: function(error) {
+                    console.error(error);
+                    // Swal.fire('¡Éxito!', 'Se ha agregado a favoritos exitosamente.', 'success');
+                }
+            });
+        }
+    </script>
 </x-app-layout>

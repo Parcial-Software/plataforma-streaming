@@ -176,7 +176,7 @@
                                 <div class="list__item" data-song-id="{{ $song['id'] }}" data-song-name="{{ $song['name'] }}" data-song-artist="{{ $song['artist'] }}" data-song-album="{{ $song['album'] }}" data-song-url="{{ $song['fileUrl'] }}" data-song-cover="{{ $song['imageUrl'] }}">
                                     <div class="list__cover">
                                         <img src="{{ $song['imageUrl'] }}" alt="{{ $song['name'] }}">
-                                        <a href="" class="btn btn-play btn-sm btn-default btn-icon rounded-pill" data-play-id="{{ $song['id'] }}" aria-label="Play pause">
+                                        <a href="" onclick="addToPlayer(event, `{{ $song['id'] }}`);" class="btn btn-play btn-sm btn-default btn-icon rounded-pill" data-play-id="{{ $song['id'] }}" aria-label="Play pause">
                                             <i class="ri-play-fill icon-play"></i>
                                             <i class="ri-pause-fill icon-pause"></i>
                                         </a>
@@ -364,6 +364,26 @@
                 success: function(response) {
                     console.log(response);
                     $(event.target).addClass('favorited');
+
+                },
+                error: function(error) {
+                    console.error(error);
+                    // Swal.fire('¡Éxito!', 'Se ha agregado a favoritos exitosamente.', 'success');
+                }
+            });
+        }
+        function addToPlayer(event, songId) {
+            event.preventDefault();
+            $.ajax({
+                url: '/addToPlayer',
+                type: 'POST',
+                data: {
+                    songId: songId,
+                    _token: $('input[name="_token"]').val()
+                },
+                success: function(response) {
+                    console.log(response);
+                    $(event.target).addClass('addPlayer');
 
                 },
                 error: function(error) {
