@@ -123,4 +123,21 @@ Route::post('/favorite', function (Request $request) {
     return response()->json(['success' => 'Canción agregada a favoritos'], 200);
 })->name('x');
 
+Route::post('/addToPlayer', function (Request $request) {
+    $songId = $request->input('songId');
+
+    $apiUrl = config('apiUrl');
+    $response = Http::post($apiUrl . 'Histories', [
+        'userId' => session('id'),
+        'songId' => $songId,
+        'timestamp' => now(),
+    ])->json();
+
+    if ($response['status'] != 200) {
+        return response()->json(['error' => 'Error al agregar la canción al reproductor'], 500);
+    }
+
+    return response()->json(['success' => 'Canción agregada al reproductor'], 200);
+})->name('z');
+
 
