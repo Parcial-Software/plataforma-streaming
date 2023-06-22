@@ -14,7 +14,7 @@ use App\Http\Controllers\SubscriptionsController;
 use App\Models\Genero;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -106,5 +106,21 @@ Route::post('/mostListenedGenders/ajax', [GenderController::class, 'gendersListe
 ->name('gender.gendersListened');
 Route::post('/earningsByPlanType/ajax', [PlanController::class, 'earningsByPlanType'])
 ->name('plan.earningsByPlanType');
+
+Route::post('/favorite', function (Request $request) {
+    $songId = $request->input('songId');
+
+    $apiUrl = config('apiUrl');
+    $response = Http::post($apiUrl . 'Favorites', [
+        'userId' => session('id'),
+        'songId' => $songId,
+    ])->json();
+
+    if ($response['status'] != 200) {
+        return response()->json(['error' => 'Error al agregar la canción a favoritos'], 500);
+    }
+
+    return response()->json(['success' => 'Canción agregada a favoritos'], 200);
+})->name('x');
 
 

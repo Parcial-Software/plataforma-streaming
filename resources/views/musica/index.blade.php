@@ -49,100 +49,74 @@
                         <!-- Start:: list [[ Find at scss/components/list.scss ]] -->
                         <div class="list">
                             @foreach ($songs as $song)
-                                <div class="row">
-                                    <div class="col-xl-6">
-                                        <div class="list__item" data-song-id="{{ $song['id'] }}"
-                                            data-song-name="{{ $song['name'] }}"
-                                            data-song-artist="{{ $song['artist'] }}"
-                                            data-song-album="{{ $song['albumId'] }}"
-                                            data-song-url="{{ $song['fileUrl'] }}"
-                                            data-song-cover="{{ $song['imageUrl'] }}">
+                            <div class="row">
+                                <div class="col-xl-6">
+                                    <div class="list__item" data-song-id="{{ $song['id'] }}" data-song-name="{{ $song['name'] }}" data-song-artist="{{ $song['artist'] }}" data-song-album="{{ $song['albumId'] }}" data-song-url="{{ $song['fileUrl'] }}" data-song-cover="{{ $song['imageUrl'] }}">
 
-                                            <div class="list__cover">
-                                                <img src="{{ $song['imageUrl'] }}" alt="{{ $song['name'] }}">
-                                                <a href=""
-                                                    class="btn btn-play btn-sm btn-default btn-icon rounded-pill"
-                                                    data-play-id="{{ $song['id'] }}" aria-label="Play pause">
-                                                    <i class="ri-play-fill icon-play"></i>
-                                                    <i class="ri-pause-fill icon-pause"></i>
-                                                </a>
-                                            </div>
-                                            <div class="list__content">
-                                                <a href="song-details.html"
-                                                    class="list__title text-truncate">{{ $song['name'] }}</a>
-                                                <p class="list__subtitle text-truncate">
-                                                    <a href="artist-details.html">{{ $song['artist'] }}</a>
-                                                </p>
-                                            </div>
-                                            <ul class="list__option">
-                                                <li>
-                                                    <a href="javascript:void(0);" role="button" class="d-inline-flex"
-                                                        aria-label="Favorite" data-favorite-id="{{ $song['id'] }}">
-                                                        <i class="ri-heart-line heart-empty"></i>
-                                                        <i class="ri-heart-fill heart-fill"></i>
-                                                    </a>
-                                                </li>
-
-
-                                                <li><span class="amplitude-duration-minutes"></span>:<span
-                                                        class="amplitude-duration-seconds"></span></li>
-
-                                                <li class="dropstart d-inline-flex">
-                                                    <a class="dropdown-link" href="javascript:void(0);" role="button"
-                                                        data-bs-toggle="dropdown" aria-label="Cover options"
-                                                        aria-expanded="false">
-                                                        <i class="ri-more-fill"></i>
-                                                    </a>
-                                                    <ul class="dropdown-menu dropdown-menu-sm">
-                                                        <li><a class="dropdown-item" href="javascript:void(0);"
-                                                                role="button">Add to queue</a></li>
-                                                        <li><a class="dropdown-item" href="javascript:void(0);"
-                                                                role="button">Next to play</a></li>
-                                                        <li><a class="dropdown-item" href="javascript:void(0);"
-                                                                role="button">Share</a></li>
-                                                        <li class="dropdown-divider"></li>
-                                                        <li><a class="dropdown-item" href="javascript:void(0);"
-                                                                role="button"
-                                                                data-play-id="{{ $song['id'] }}">Play</a></li>
-                                                        <li>
-                                                            <button
-                                                                class="px-3 py-1 bg-#92929F rounded-sm flex items-start min-w-32">
-                                                                <span class="font-semibold text-start">Añadir
-                                                                    Playlist</span>
-                                                                <span>
-                                                                    <svg class="w-4 h-4 transition duration-150 ease-in-out transform fill-current group-hover:-rotate-180"
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        viewBox="0 0 20 20">
-                                                                        <path
-                                                                            d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                                                    </svg>
-                                                                </span>
-                                                            </button>
-                                                            <ul
-                                                                class="absolute transition duration-150 ease-in-out origin-top-right transform scale-0 bg-black group-hover:scale-100 min-w-32">
-                                                                <li><a class="dropdown-item"
-                                                                        href="{{ route('playlist.create') }}"
-                                                                        download>Crear Playlist</a></li>
-                                                                <li class="divider"></li> <!-- Línea divisoria -->
-
-                                                                @foreach ($playlists as $playlist)
-                                                                    <form method="POST"
-                                                                        action="{{ route('playlist.playlistSong', ['playlistId' => $playlist['id'], 'songId' => $song['id']]) }}">
-                                                                        @csrf
-                                                                        <li>
-                                                                            <button type="submit"
-                                                                                class="playlist-button">{{ $playlist['name'] }}</button>
-                                                                        </li>
-                                                                    </form>
-                                                                @endforeach
-                                                            </ul>
-                                                        </li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                                        <div class="list__cover">
+                                            <img src="{{ $song['imageUrl'] }}" alt="{{ $song['name'] }}">
+                                            <a href="" class="btn btn-play btn-sm btn-default btn-icon rounded-pill" data-play-id="{{ $song['id'] }}" aria-label="Play pause">
+                                                <i class="ri-play-fill icon-play"></i>
+                                                <i class="ri-pause-fill icon-pause"></i>
+                                            </a>
                                         </div>
+                                        <div class="list__content">
+                                            <a href="song-details.html" class="list__title text-truncate">{{ $song['name'] }}</a>
+                                            <p class="list__subtitle text-truncate">
+                                                <a href="artist-details.html">{{ $song['artist'] }}</a>
+                                            </p>
+                                        </div>
+                                        <ul class="list__option">
+                                            <li>
+                                                <button type="button" onclick="addToFavorites(event, `{{ $song['id'] }}`);" class="heart-button hover-red">
+                                                    <i class="ri-heart-line heart-icon"></i>
+                                                </button>
+                                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                            </li>
+
+
+                                            <li><span class="amplitude-duration-minutes"></span>:<span class="amplitude-duration-seconds"></span></li>
+
+                                            <li class="dropstart d-inline-flex">
+                                                <a class="dropdown-link" href="javascript:void(0);" role="button" data-bs-toggle="dropdown" aria-label="Cover options" aria-expanded="false">
+                                                    <i class="ri-more-fill"></i>
+                                                </a>
+                                                <ul class="dropdown-menu dropdown-menu-sm">
+                                                    <li><a class="dropdown-item" href="javascript:void(0);" role="button">Add to queue</a></li>
+                                                    <li><a class="dropdown-item" href="javascript:void(0);" role="button">Next to play</a></li>
+                                                    <li><a class="dropdown-item" href="javascript:void(0);" role="button">Share</a></li>
+                                                    <li class="dropdown-divider"></li>
+                                                    <li><a class="dropdown-item" href="javascript:void(0);" role="button" data-play-id="{{ $song['id'] }}">Play</a></li>
+                                                    <li>
+                                                        <button class="px-3 py-1 bg-#92929F rounded-sm flex items-start min-w-32">
+                                                            <span class="font-semibold text-start">Añadir
+                                                                Playlist</span>
+                                                            <span>
+                                                                <svg class="w-4 h-4 transition duration-150 ease-in-out transform fill-current group-hover:-rotate-180" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                                                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                                                </svg>
+                                                            </span>
+                                                        </button>
+                                                        <ul class="absolute transition duration-150 ease-in-out origin-top-right transform scale-0 bg-black group-hover:scale-100 min-w-32">
+                                                            <li><a class="dropdown-item" href="{{ route('playlist.create') }}" download>Crear Playlist</a></li>
+                                                            <li class="divider"></li> <!-- Línea divisoria -->
+
+                                                            @foreach ($playlists as $playlist)
+                                                            <form method="POST" action="{{ route('playlist.playlistSong', ['playlistId' => $playlist['id'], 'songId' => $song['id']]) }}">
+                                                                @csrf
+                                                                <li>
+                                                                    <button type="submit" class="playlist-button">{{ $playlist['name'] }}</button>
+                                                                </li>
+                                                            </form>
+                                                            @endforeach
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
+                            </div>
                             @endforeach
                         </div>
                         <!-- End:: list -->
@@ -172,6 +146,9 @@
 
     </body>
     <style>
+        .hover-red:hover .heart-icon {
+            color: red;
+        }
         .playlist-button {
             display: block;
             width: 100%;
@@ -226,4 +203,27 @@
         }
     </style>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript">
+        function addToFavorites(event, songId) {
+            event.preventDefault();
+            $.ajax({
+                url: '/favorite',
+                type: 'POST',
+                data: {
+                    songId: songId,
+                    _token: $('input[name="_token"]').val()
+                },
+                success: function(response) {
+                    console.log(response);
+                    $(event.target).addClass('favorited');
+
+                },
+                error: function(error) {
+                    console.error(error);
+                    // Swal.fire('¡Éxito!', 'Se ha agregado a favoritos exitosamente.', 'success');
+                }
+            });
+        }
+    </script>
 </x-app-layout>
