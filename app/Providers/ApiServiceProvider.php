@@ -22,6 +22,7 @@ class ApiServiceProvider extends ServiceProvider
         config([
             'apiUrl' => config('api.url'),
             'aiUrl' => config('api.aiUrl'),
+            'biUrl' => config('api.biUrl'),
         ]);
     }
 }

@@ -30,8 +30,8 @@ class GenderController extends Controller
 
     public function gendersListened(Request $request)
     {
-        $grafica = Http::get('http://localhost:4000/api/mostListenedGenders');
-
+        $biUrl = config('biUrl');
+        $grafica = Http::get($biUrl . 'mostListenedGenders')->json();
         return response($grafica, 200)->header('Content-type', 'application/json');
     }
    

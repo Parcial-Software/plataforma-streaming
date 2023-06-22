@@ -61,8 +61,9 @@ Route::get('/generos_detalles', function () {
 })->name('genero.generos_detalles');
 
 Route::get('/analisis', function () {
-    $songs = Http::get('http://localhost:4000/api/fiveSongMoreFavorite');
-    $earning = Http::get('http://localhost:4000/api/earningsTotal');
+    $biUrl = config('biUrl');
+    $songs = Http::get( $biUrl . 'fiveSongMoreFavorite' );
+    $earning = Http::get($biUrl . 'earningsTotal');
     
     return view('dashboard.analisis', ['songs' =>  json_decode($songs), 'earnings' => json_decode($earning)]);
 })->name('dashboard.analisis');

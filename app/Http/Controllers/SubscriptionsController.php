@@ -46,8 +46,8 @@ class SubscriptionsController extends Controller
     }
 
     public function subscriptionByCountry(Request $request){
-        $grafica = Http::get('http://localhost:4000/api/amountSuscriptionsByCountry');
-
+        $biUrl = config('biUrl');
+        $grafica = Http::get($biUrl . 'amountSuscriptionsByCountry')->json();
         return response($grafica, 200)->header('Content-type', 'application/json');
     }
 }
