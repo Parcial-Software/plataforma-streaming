@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\AlbumController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\FavoriteController;
 use App\Http\Controllers\GenderController;
 use App\Http\Controllers\GeneroController;
+use App\Http\Controllers\HistoriesController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PlanController;
 use App\Http\Controllers\PayController;
@@ -51,6 +53,8 @@ Route::post('/playlist/{playlistId}/song/{songId}', [PlaylistController::class, 
 Route::get('/perfil', [ProfileController::class, 'index'])->name('perfil.index');
 Route::get('/home', [HomeController::class, 'index'])->name('home.index');
 Route::get('/dashboard', [HomeController::class, 'index'])->name('dashboard');
+Route::get('/histories', [HistoriesController::class, 'index'])->name('histories.index');
+Route::get('/favorities', [FavoriteController::class, 'index'])->name('favorities.index');
 
 Route::get('/music', function () {
     return view('musica.music');

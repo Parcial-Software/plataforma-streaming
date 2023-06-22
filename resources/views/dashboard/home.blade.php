@@ -156,8 +156,7 @@
                                             <li>
                                                 <a href="javascript:void(0);" role="button" class="d-inline-flex" aria-label="Favorite"
                                                     data-favorite-id="{{ $album['id'] }}">
-                                                    <i class="ri-heart-line heart-empty"></i>
-                                                    <i class="ri-heart-fill heart-fill"></i>
+                                                   
                                                 </a>
                                             </li>
                                             <li class="dropstart d-inline-flex">

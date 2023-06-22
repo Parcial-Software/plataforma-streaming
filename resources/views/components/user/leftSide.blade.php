@@ -61,13 +61,13 @@
                   </li>
                   @endif
                   <li class="nav-item">
-                      <a href="{{ route('favorito.favoritos') }}" class="nav-link d-flex align-items-center">
+                      <a href="{{ route('favorities.index') }}" class="nav-link d-flex align-items-center">
                           <i class="ri-heart-line fs-5"></i>
                           <span class="ps-3">Favorites</span>
                       </a>
                   </li>
                   <li class="nav-item">
-                      <a href="{{ route('history.history') }}" class="nav-link d-flex align-items-center">
+                      <a href="{{ route('histories.index') }}" class="nav-link d-flex align-items-center">
                           <i class="ri-history-line fs-5"></i>
                           <span class="ps-3">History</span>
                       </a>
