@@ -52,12 +52,14 @@
                       <span class="nav-item--head__text">Music</span>
                       <span class="nav-item--head__dots">...</span>
                   </li>
+                  @if( session('roleId') == '3')
                   <li class="nav-item">
                       <a href="{{ route('dashboard.analisis') }}" class="nav-link d-flex align-items-center">
                           <i class="ri-pie-chart-line fs-5"></i>
                           <span class="ps-3">Analytics</span>
                       </a>
                   </li>
+                  @endif
                   <li class="nav-item">
                       <a href="{{ route('favorito.favoritos') }}" class="nav-link d-flex align-items-center">
                           <i class="ri-heart-line fs-5"></i>

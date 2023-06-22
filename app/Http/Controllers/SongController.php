@@ -78,6 +78,5 @@ class SongController extends Controller
 
         return redirect()->route('dashboard')->with('success', 'Cancion creada correctamente');
     }
-
  
 }
