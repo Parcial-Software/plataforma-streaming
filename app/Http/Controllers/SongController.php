@@ -53,7 +53,7 @@ class SongController extends Controller
             'imageUrl' => '',
             'fileUrl' => '',
             'artist' => $request->input('artist'),
-            'lyrics' => $request->input('lyrics'),
+            'lyrics' => '',
             'albumId' => $request->input('albumId'),
             'genderId' => $request->input('genderId'),
         ])->json();

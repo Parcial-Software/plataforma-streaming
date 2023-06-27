@@ -113,9 +113,6 @@
                                                             @endforeach
                                                         </select>
                                                     </div>
-                                                    <div class="mb-4 col-12">
-                                                        <textarea name="lyrics" id="lyrics" cols="30" rows="4" class="form-control" placeholder="Letra"></textarea>
-                                                    </div>
                                                     <div class="text-center card-footer">
                                                         <button type="submit" class="btn btn-primary"
                                                             style="min-width: 140px;">Guardar</button>
